@@ -1,0 +1,336 @@
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #d6d2d1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*style for section */
+section>div.row{
+    /* border: 2px solid red; */
+    height: 58rem;
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+section>div.row>div.col-1{
+    /* border: 2px solid blue; */
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* form section starts here */
+section>div.row>div.col-1>form{
+    border: 2px solid #4f4d4e;
+    border-radius: 10px 10px 10px 10px;
+    width: 30em;
+    height: 40rem;
+    /* display: flex; */
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+/* login form starts here */
+form#login{
+    display: none;
+}
+
+/* login form ends here */
+div.text_wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* border:1px solid #4f4d4e; */
+    height: 5rem;
+}
+
+div.text_wrapper>h1{
+    font-weight: 100;
+    font-size: 2.2rem;
+    color: #272727;
+}
+
+p{
+    color: #272727;
+    margin-bottom: 10px;
+}
+
+input#email,input#email-signUp{
+    width: 22.6rem;
+    height: 2.5rem;
+    border: 1px solid #4f4d4e;
+    border-radius: 10px ;
+    padding: 0px 5px;
+    font-weight: 100;
+    font-size: 17px;
+}
+input#input_password{
+    width: 20rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px 0px 0px 10px ;
+    padding: 0px 5px;
+    font-weight: 100;
+    font-size: 17px;
+}
+input#input_signUp_password{
+    width: 23rem;
+    height: 2.5rem;
+    border: none ;
+    border-radius: 10px 10px 10px 10px ;
+    padding: 0px 5px;
+    font-weight: 100;
+    font-size: 17px;
+}
+
+/* state */
+input#email:focus,input#input_password:active,input#input_password:hover,  input#input_password:focus{
+border: none;
+outline: none ; 
+}
+
+section>div.row>div.col-1>form .input_wrapper{
+    border: 1px solid #4f4d4e;
+    width: 22.7rem;
+    display: flex;
+    align-items:center ;
+    /* justify-content: space-between; */
+    gap: 8px;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+section>div.row>div.col-1>form .input_wrapper img{
+    width: 18px;
+    height: 28px;
+}
+
+section>div.row>div.col-2{
+    /* border: 2px solid green; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* password detector style */
+.passwordIndicator{
+    display: none;
+    flex-flow: row nowrap;
+    /* border: 1px solid red; */
+    width: 22em;
+    height: 1em;
+    justify-content: space-evenly;
+    align-items: baseline;
+    /* align-content: center; */
+}
+.passwordIndicator>div.level{
+    border: 1px solid #4f4d4e;
+    width: 3em;
+    height: 4px;
+    /* background-color: red; */
+}
+.passwordIndicator>p{
+    font-size: 13px;
+}
+
+div.btn>button{
+    width: 22.7rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: 100;
+    font-size: 20px;
+    color: #272727;
+}
+
+
+
+@media screen  and (max-width: 899px) {
+
+    body{
+        height: 100vh;
+        width: auto;
+        background-color: #d6d2d1;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url("img/jay.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+/*style for section */
+section{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section>div.row{
+    /* border: 2px solid red; */
+    height: 90vh;
+    /* height: 100%; */
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #cacaca79;
+}
+
+section>div.row>div.col-1{
+    /* border: 2px solid blue; */
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* form section starts here */
+section>div.row>div.col-1>form{
+    /* border: 1px solid #4f4d4e; */
+    border:none;
+    border-radius: 10px 10px 10px 10px;
+    width: 35rem;
+    height: 30rem;
+    /* display: flex; */
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px !important;
+}
+div.text_wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* border:1px solid #4f4d4e; */
+    height: 5rem;
+    /* background-color: #d6d2d1; */
+}
+
+div.text_wrapper>h1{
+    font-weight: 100;
+    font-size: 1.9rem;
+    color: #272727;
+}
+p{
+    font-size: 0.9rem;
+    color: #272727;
+}
+
+input#email,input#email-signUp{
+    width: 14.4rem;
+    height: 2rem;
+    border: 1px solid #4f4d4e;
+    border-radius: 10px;
+    padding: 0px 8px;
+    font-weight: 100;
+    font-size: 13px;
+}
+input#email:active,input#email:hover,input#email:focus,input#input_password:active,   input#input_password:hover,   input#input_password:focus{
+    border: none;
+    outline: none; 
+}
+input#input_password{
+    width: 12rem;
+    height: 2rem;
+    border: none;
+    /* border-radius: 10px 0px 0px 10px ; */
+    padding: 0px 5px;
+    font-weight: 100;
+    font-size: 17px;
+}
+input#input_signUp_password{
+    width: 23rem;
+    height: 2rem;
+    border: none;
+    border-radius: 10px 10px 10px 10px ;
+    padding: 0px 5px;
+    font-weight: 100;
+    font-size: 17px;
+}
+
+    /* password detector style */
+    .passwordIndicator{
+        display: none;
+        flex-flow: row nowrap;
+        /* border: 1px solid red; */
+        width: 16em;
+        height: 1em;
+        justify-content: space-evenly;
+        align-items: baseline;
+        /* align-content: center; */
+    }
+    .passwordIndicator>div.level{
+        border: 1px solid #ffffff;
+        width:2em;
+        height: 4px;
+    }
+    .passwordIndicator>p{
+        color: #ffffff;
+    }
+
+section>div.row>div.col-1>form div.input_wrapper{
+    border: 1px solid #4f4d4e;
+    width: 15rem;
+    height: 2.2rem;
+    display: flex;
+    align-items:center ;
+    /* justify-content: space-between; */
+    gap: 8px;
+    border-radius: 10px 10px 10px 10px;
+    background-color:white ;
+
+}
+
+section>div.row>div.col-1>form .input_wrapper img{
+    width: 16px;
+    height: 24px;
+    align-self: center;
+}
+
+section>div.row>div.col-2{
+    /* border: 2px solid green; */
+    width: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+div.btn{
+    height: 3em;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.btn>button{
+    width: 15rem;
+    height: 2rem;
+    border: 1px solid #272727;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: 100;
+    font-size: 17px;
+    color: #272727;
+}
+
+}
