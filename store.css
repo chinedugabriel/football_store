@@ -1,7 +1,7 @@
 body{
     height: 100vh;
     width: 100%;
-    background-color: #d6d2d1;
+    background-color: #BDBDBD;
     font-family: 'Quicksand', Arial, sans-serif;
 }
 *{
@@ -200,6 +200,20 @@ section>div.nav>div.nav-icon-group>img{
 }
 /* nav bar ends here */
 
+/* .row1 starts here */
+    section.section-2{
+        /* background-image: url("img/man-baller.png"); */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        border: 1px solid rgb(45, 129, 70);
+    }
+/* .row1 ands here */
+/* container starts here */
+
+/* container ends here */
+
 /* shop section ends here */
 
 
@@ -209,9 +223,9 @@ section>div.nav>div.nav-icon-group>img{
     body{
         height: 100vh;
         width: auto;
-        background-color: #d6d2d1;
+        /* background-color: #d6d2d1; */
         font-family: Arial, Helvetica, sans-serif;
-        background-image: url("img/jay.png");
+        /* background-image: url("img/jay.png"); */
         background-repeat: no-repeat;
         background-size: cover;
 

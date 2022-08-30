@@ -108,3 +108,25 @@ registerForm.style.display = "flex";
         }
     }
     document.getElementById("btn-signUp").addEventListener("click", toggleFormSection);
+    // section-1
+    let section_1 = document.getElementById("section-1");
+    section_1.style.display = "none";
+
+    // section-2 starts here
+    // section var..
+    let section_2 = document.getElementById("section-2");
+    // list of background picture for section-2 slide
+    // let imgList = ["img/man-baller.png","img/man-model.png", "img/man-baller.png"];
+    let imgList = ["img/slider_img/bg1.png","img/slider_img/bg2.png", "img/slider_img/bg3.png", "img/slider_img/bg4.png"];
+    let num = 0;
+
+    function section_slider(){
+        if(num <= imgList.length-1){
+            section_2.style.backgroundImage = `url(${imgList[num]})`;
+            num++
+        }else{
+            num = 0;
+        }
+
+    }
+    setInterval(section_slider, 3500);
