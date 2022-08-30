@@ -117,7 +117,7 @@ registerForm.style.display = "flex";
     let section_2 = document.getElementById("section-2");
     // list of background picture for section-2 slide
     // let imgList = ["img/man-baller.png","img/man-model.png", "img/man-baller.png"];
-    let imgList = ["img/slider_img/bg1.png","img/slider_img/bg2.png", "img/slider_img/bg3.png", "img/slider_img/bg4.png"];
+    let imgList = ["img/slider_img/bg1.png", "img/slider_img/bg3.png", "img/slider_img/bg4.png","img/slider_img/bg5.png","img/slider_img/bg6.png"];
     let num = 0;
 
     function section_slider(){
@@ -129,4 +129,4 @@ registerForm.style.display = "flex";
         }
 
     }
-    setInterval(section_slider, 3500);
+    setInterval(section_slider, 4000);
