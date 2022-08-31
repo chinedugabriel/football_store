@@ -168,7 +168,7 @@ section>div.nav{
     align-items: center;
 }
 /* nav list */
-#menu-toggle-1,#menu-toggle-2,img#img-logo{
+#menu-toggle-btn,img#img-logo{
     /* This is hidden from desktop view only 
     which is used as nav icon for mobile
     */
@@ -537,6 +537,7 @@ section.section-2{
     align-items: center;
     /* align-content: space-around; */
     position: relative;
+    padding: 0px;
 }
 /* .row1 ands here */
 
@@ -551,11 +552,11 @@ section>div.nav{
     position: sticky;
     /* padding-top: 5px; */
     top: 35px;
-    width: 98%;
+    width: 90%;
     height: 3.5em;
 }
 /* nav list */
-#menu-toggle-1,#menu-toggle-2{
+#menu-toggle-btn{
     /* This is hidden from desktop view only 
     which is used as nav icon for mobile
     */
@@ -575,8 +576,8 @@ section>div.nav>ul{
     height: 15em;
     align-items: center;
     justify-content: space-evenly;
-    /* display: none; */
-    background-color: #dddddd;
+    display: none;
+    background-color: #ddddddb0;
     position: absolute;
     top: 58px;
 }
@@ -653,7 +654,7 @@ section>div.nav>div.nav-icon-group>img{
 /* section-3 starts here */
     section.section-3{
         height: auto;
-        width: 98%;
+        width: 90%;
         border: 2px solid #0263bd;
         display: flex;
         justify-content: center;
@@ -666,7 +667,7 @@ section>div.nav>div.nav-icon-group>img{
     }
     section.section-3>div.row2{
         border: 2px solid #d13e3e;
-        width: 80%;
+        width: 85%;
         height: auto;
         display: flex;
         flex-flow: row wrap;

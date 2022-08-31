@@ -110,16 +110,21 @@ registerForm.style.display = "flex";
     document.getElementById("btn-signUp").addEventListener("click", toggleFormSection);
     // section-1
     let section_1 = document.getElementById("section-1");
+
+    /*+++++++++++++++++++++++++++++++++++++++++++++++++*/ 
     // section display is disabled here
     // section_1.style.display = "none";
 
     // section-2 starts here
+
     // section var..
     let section_2 = document.getElementById("section-2");
+
     // list of background picture for section-2 slide
     let imgList = ["img/slider_img/bg1.png", "img/slider_img/bg5.png"];
     let num = 0;
 
+    // slider function
     function section_slider(){
         if(num <= imgList.length-1){
             section_2.style.backgroundImage = `url(${imgList[num]})`;
@@ -130,3 +135,19 @@ registerForm.style.display = "flex";
 
     }
     setInterval(section_slider, 5000);
+
+    // nav toggle
+    let btn_toggle_nav = document.getElementById("menu-toggle-btn");
+    let menuList = document.getElementById("menu-list");
+    // this function toggles the menu list for mobile
+    function toggleNav(){
+        if( menuList.style.display == "none"){
+            menuList.style.display = "flex";
+            btn_toggle_nav.style.backgroundImage = 'url("img/menu-toggle-2.png")';
+        }else{
+            menuList.style.display = "none";
+            btn_toggle_nav.style.backgroundImage = 'url("img/menu-toggle-1.png")';
+        }
+    }
+    // this triggers the toggle btn
+    btn_toggle_nav.addEventListener("click", toggleNav);
