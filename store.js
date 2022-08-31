@@ -111,7 +111,7 @@ registerForm.style.display = "flex";
     // section-1
     let section_1 = document.getElementById("section-1");
     // section display is disabled here
-    section_1.style.display = "none";
+    // section_1.style.display = "none";
 
     // section-2 starts here
     // section var..

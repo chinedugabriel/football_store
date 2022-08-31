@@ -168,6 +168,12 @@ section>div.nav{
     align-items: center;
 }
 /* nav list */
+#menu-toggle-1,#menu-toggle-2,img#img-logo{
+    /* This is hidden from desktop view only 
+    which is used as nav icon for mobile
+    */
+    display: none;
+}
 section>div.nav>ul{
     display: flex;
     flex-flow: row nowrap;
@@ -180,8 +186,8 @@ section>div.nav>ul{
 }
 /* nav logo */
 section>div.nav>img.img-logo{
-    min-height: 54px;
-    width: 53px;
+    height: 42px;
+    width: 40px;
 }
 /* nav group icon */
 section>div.nav>div.nav-icon-group{
@@ -330,25 +336,33 @@ section.section-3>button{
 
 
 @media screen  and (max-width: 899px) {
-
+    /* html{
+        padding: 0px;
+        margin: 0px;
+        width: 94%;
+        border: 2px solid #080408;
+        overflow: hidden;
+    } */
     body{
-        height: 100vh;
+        height: auto;
         width: auto;
-        /* background-color: #d6d2d1; */
-        font-family: Arial, Helvetica, sans-serif;
+        /* background-color: #701d62; */
+        border: 2px solid #701d62;
+        /* font-family: Arial, Helvetica, sans-serif; */
         /* background-image: url("img/jay.png"); */
         background-repeat: no-repeat;
         background-size: cover;
-
+        padding: 0px;
+        margin: 0px;
     }
     *{
-        margin: 0px;
-        padding: 0px;
+        margin: 0px !important;
+        padding: 0px !important;
     }
-/*style for section */
-section{
+/*style for section-1 */
+section#section-1{
     width: auto;
-    height: auto;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -507,71 +521,99 @@ div.btn>button{
 
 /* shop section starts here */
 
-/* nav bar starts here */
+
+/* .row1 starts here */
 section.section-2{
+    /* background-image: url("img/man-baller.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 98%; */
+    height: 110vh;
+    border: 1px solid rgb(45, 129, 70);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    /* align-content: space-around; */
     position: relative;
 }
+/* .row1 ands here */
+
+/* nav bar starts here */
 section>div.nav{
     border: 1px solid red ;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    position: -webkit-sticky;
     position: sticky;
-    width: 100%;
-    
+    /* padding-top: 5px; */
+    top: 35px;
+    width: 98%;
+    height: 3.5em;
 }
 /* nav list */
+#menu-toggle-1,#menu-toggle-2{
+    /* This is hidden from desktop view only 
+    which is used as nav icon for mobile
+    */
+    display:block;
+    border: 1px solid palevioletred;
+    height: 50px;
+    width: 50px;
+    background-image: url("img/menu-toggle-1.png");
+}
+
 section>div.nav>ul{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     list-style: none;
     border: 2px solid rgb(45, 129, 70) ;
-    width: 12em;
-    height: 3em;
+    width: 8em;
+    height: 15em;
     align-items: center;
     justify-content: space-evenly;
-    display: none;
+    /* display: none; */
+    background-color: #dddddd;
+    position: absolute;
+    top: 58px;
 }
 /* nav logo */
+img#img-logo{
+    display: block;
+    height: 42px;
+    width: 40px;
+}
 section>div.nav>img.img-logo{
-    min-height: 54px;
-    width: 53px;
+    height: 42px;
+    width: 40px;
+    display: none;
 }
 /* nav group icon */
 section>div.nav>div.nav-icon-group{
     width: 5em;
-    height: 3em;
+    height: 2em;
     border: 2px solid rgb(45, 129, 70) ;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-evenly;
-    position: absolute;
+    /* position: absolute;
     top: 0.1em;
-    right: 0.1em;
+    right: 0.1em; */
     
 }
 
 /* nav group icon img*/
 section>div.nav>div.nav-icon-group>img{
     /* height: 26px; */
-    width: 35px;
+    width: 32px;
 }
 /* nav bar ends here */
 
-/* .row1 starts here */
-    section.section-2{
-        /* background-image: url("img/man-baller.png"); */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100%;
-        border: 1px solid rgb(45, 129, 70);
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    /* .row1 ands here */
+
     /* container starts here */
     section#section-2>div.container{
         height: 80%;
@@ -589,7 +631,7 @@ section>div.nav>div.nav-icon-group>img{
         align-items: center;
     }
     section#section-2>div.container>div.row1>h1{
-        font-size: 48px;
+        font-size: 35px;
         font-weight: 400;
         /* color: #ffffff; */
         
@@ -601,7 +643,7 @@ section>div.nav>div.nav-icon-group>img{
     section>div.icon-down{
         text-align: center;
         border: 1px solid #0263bd;
-        height: 5em;
+        height: 2.5em;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -610,7 +652,8 @@ section>div.nav>div.nav-icon-group>img{
 
 /* section-3 starts here */
     section.section-3{
-        height: 100%;
+        height: auto;
+        width: 98%;
         border: 2px solid #0263bd;
         display: flex;
         justify-content: center;
@@ -618,11 +661,13 @@ section>div.nav>div.nav-icon-group>img{
         align-items: center;
         justify-content: center;
         gap: 20px;
+        margin: 0px;
+        padding: 0px;
     }
     section.section-3>div.row2{
         border: 2px solid #d13e3e;
-        width: 80vw;
-        height: 90vh;
+        width: 80%;
+        height: auto;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
@@ -633,15 +678,15 @@ section>div.nav>div.nav-icon-group>img{
 
 section.section-3 div.products{
     border: 1px solid #002a52;
-    width: 20em;
-    height: 25em;
+    width: 15em;
+    height: 20em;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
 section.section-3 div.products>img{
-    height: 20em;
+    height: 15em;
 }
 section.section-3 div.products p{
     font-size: 20px;
@@ -665,22 +710,22 @@ section.section-3 div.products>div.cart-text-wrapper>div.row-text{
 }
 section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart{
     border: 1px solid #272727;
-    height: 3em;
-    width: 3em;
-    border-radius: 1.5em;
+    height: 2em;
+    width: 2em;
+    border-radius: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart>img{
-    width: 1.6em;
+    width: 1.4em;
 }
 
 section.section-3>button{
-    height: 5vh;
-    width: 7vw;
+    height: 35px;
+    width: 110px;
     border: 1px solid #272727;
-    border-radius: 25px;
+    border-radius: 20px;
     background-color: transparent;
 }
 
