@@ -110,14 +110,14 @@ registerForm.style.display = "flex";
     document.getElementById("btn-signUp").addEventListener("click", toggleFormSection);
     // section-1
     let section_1 = document.getElementById("section-1");
+    // section display is disabled here
     section_1.style.display = "none";
 
     // section-2 starts here
     // section var..
     let section_2 = document.getElementById("section-2");
     // list of background picture for section-2 slide
-    // let imgList = ["img/man-baller.png","img/man-model.png", "img/man-baller.png"];
-    let imgList = ["img/slider_img/bg1.png", "img/slider_img/bg3.png", "img/slider_img/bg4.png","img/slider_img/bg5.png","img/slider_img/bg6.png"];
+    let imgList = ["img/slider_img/bg1.png", "img/slider_img/bg5.png"];
     let num = 0;
 
     function section_slider(){
@@ -129,4 +129,4 @@ registerForm.style.display = "flex";
         }
 
     }
-    setInterval(section_slider, 4000);
+    setInterval(section_slider, 5000);

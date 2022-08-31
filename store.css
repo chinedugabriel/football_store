@@ -161,7 +161,7 @@ div.btn>button{
 
 /* nav bar starts here */
 section>div.nav{
-    border: 1px solid red ;
+    /* border: 1px solid red ; */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -172,7 +172,7 @@ section>div.nav>ul{
     display: flex;
     flex-flow: row nowrap;
     list-style: none;
-    border: 2px solid rgb(45, 129, 70) ;
+    /* border: 2px solid rgb(45, 129, 70) ; */
     width: 20em;
     height: 3em;
     align-items: center;
@@ -187,7 +187,7 @@ section>div.nav>img.img-logo{
 section>div.nav>div.nav-icon-group{
     width: 10em;
     height: 3em;
-    border: 2px solid rgb(45, 129, 70) ;
+    /* border: 2px solid rgb(45, 129, 70) ; */
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -208,12 +208,122 @@ section>div.nav>div.nav-icon-group>img{
         background-repeat: no-repeat;
         background-position: center;
         height: 100%;
-        border: 1px solid rgb(45, 129, 70);
+        /* border: 1px solid rgb(45, 129, 70); */
+        display: flex;
+        flex-flow: column nowrap;
     }
-/* .row1 ands here */
-/* container starts here */
+    /* .row1 ands here */
+    /* container starts here */
+    section#section-2>div.container{
+        height: 80%;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #bd9102; */
+    }
+    
+    section#section-2>div.container>div.row1{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 10px;
+        align-items: center;
+    }
+    section#section-2>div.container>div.row1>h1{
+        font-size: 48px;
+        font-weight: 400;
+        /* color: #ffffff; */
+        
+    }
+    section#section-2>div.container>div.row1>p{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    section>div.icon-down{
+        text-align: center;
+        /* border: 1px solid #0263bd; */
+        height: 5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* container ends here */
 
-/* container ends here */
+/* section-3 starts here */
+    section.section-3{
+        height: 100%;
+        /* border: 2px solid #0263bd; */
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+    }
+    section.section-3>div.row2{
+        /* border: 2px solid #d13e3e; */
+        width: 80vw;
+        height: 90vh;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items:center;
+        align-content: space-between;
+
+    }
+
+section.section-3 div.products{
+    border: 1px solid #272727;
+    width: 20em;
+    height: 25em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+section.section-3 div.products>img{
+    height: 20em;
+}
+section.section-3 div.products p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+section.section-3 div.products>div.cart-text-wrapper{
+    /* border: 1px solid #ffffff; */
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+section.section-3 div.products>div.cart-text-wrapper>div.row-text{
+    width: 65%;
+    /* border: 1px solid #9e0f0f; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart{
+    border: 1px solid #272727;
+    height: 3em;
+    width: 3em;
+    border-radius: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart>img{
+    width: 1.6em;
+}
+
+section.section-3>button{
+    height: 5vh;
+    width: 7vw;
+    border: 1px solid #272727;
+    border-radius: 25px;
+    background-color: transparent;
+}
 
 /* shop section ends here */
 
@@ -394,4 +504,185 @@ div.btn>button{
     color: #272727;
 }
 
+
+/* shop section starts here */
+
+/* nav bar starts here */
+section.section-2{
+    position: relative;
+}
+section>div.nav{
+    border: 1px solid red ;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    
+}
+/* nav list */
+section>div.nav>ul{
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    border: 2px solid rgb(45, 129, 70) ;
+    width: 12em;
+    height: 3em;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+/* nav logo */
+section>div.nav>img.img-logo{
+    min-height: 54px;
+    width: 53px;
+}
+/* nav group icon */
+section>div.nav>div.nav-icon-group{
+    width: 5em;
+    height: 3em;
+    border: 2px solid rgb(45, 129, 70) ;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0.1em;
+    right: 0.1em;
+    
+}
+
+/* nav group icon img*/
+section>div.nav>div.nav-icon-group>img{
+    /* height: 26px; */
+    width: 35px;
+}
+/* nav bar ends here */
+
+/* .row1 starts here */
+    section.section-2{
+        /* background-image: url("img/man-baller.png"); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        border: 1px solid rgb(45, 129, 70);
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    /* .row1 ands here */
+    /* container starts here */
+    section#section-2>div.container{
+        height: 80%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #bd9102;
+    }
+    
+    section#section-2>div.container>div.row1{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 10px;
+        align-items: center;
+    }
+    section#section-2>div.container>div.row1>h1{
+        font-size: 48px;
+        font-weight: 400;
+        /* color: #ffffff; */
+        
+    }
+    section#section-2>div.container>div.row1>p{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    section>div.icon-down{
+        text-align: center;
+        border: 1px solid #0263bd;
+        height: 5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* container ends here */
+
+/* section-3 starts here */
+    section.section-3{
+        height: 100%;
+        border: 2px solid #0263bd;
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    section.section-3>div.row2{
+        border: 2px solid #d13e3e;
+        width: 80vw;
+        height: 90vh;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items:center;
+        align-content: space-between;
+
+    }
+
+section.section-3 div.products{
+    border: 1px solid #002a52;
+    width: 20em;
+    height: 25em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+section.section-3 div.products>img{
+    height: 20em;
+}
+section.section-3 div.products p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+section.section-3 div.products>div.cart-text-wrapper{
+    /* border: 1px solid #ffffff; */
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+section.section-3 div.products>div.cart-text-wrapper>div.row-text{
+    width: 65%;
+    /* border: 1px solid #9e0f0f; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart{
+    border: 1px solid #272727;
+    height: 3em;
+    width: 3em;
+    border-radius: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart>img{
+    width: 1.6em;
+}
+
+section.section-3>button{
+    height: 5vh;
+    width: 7vw;
+    border: 1px solid #272727;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+/* shop section ends here */
 }
