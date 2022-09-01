@@ -355,6 +355,7 @@ section.section-3>button{
         padding: 0px;
         margin: 0px;
     }
+    
     *{
         margin: 0px ;
         padding: 0px ;
@@ -399,7 +400,7 @@ section>div.row>div.col-1>form{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 30px !important;
+    gap: 40px !important;
 }
 div.text_wrapper{
     display: flex;
