@@ -356,8 +356,8 @@ section.section-3>button{
         margin: 0px;
     }
     *{
-        margin: 0px !important;
-        padding: 0px !important;
+        margin: 0px ;
+        padding: 0px ;
     }
 /*style for section-1 */
 section#section-1{
@@ -529,7 +529,7 @@ section.section-2{
     background-repeat: no-repeat;
     background-position: center;
     /* width: 98%; */
-    height: 110vh;
+    height: 106vh;
     border: 1px solid rgb(45, 129, 70);
     display: flex;
     flex-flow: column nowrap;
@@ -617,7 +617,7 @@ section>div.nav>div.nav-icon-group>img{
 
     /* container starts here */
     section#section-2>div.container{
-        height: 80%;
+        height: 70%;
         width: 90%;
         display: flex;
         justify-content: center;
@@ -654,7 +654,7 @@ section>div.nav>div.nav-icon-group>img{
 /* section-3 starts here */
     section.section-3{
         height: auto;
-        width: 90%;
+        width: 98%;
         border: 2px solid #0263bd;
         display: flex;
         justify-content: center;
@@ -674,20 +674,23 @@ section>div.nav>div.nav-icon-group>img{
         justify-content: space-evenly;
         align-items:center;
         align-content: space-between;
+        gap: 20px;
+        padding: 10px 0px;
 
     }
 
 section.section-3 div.products{
     border: 1px solid #002a52;
-    width: 15em;
-    height: 20em;
+    width: 12em;
+    height: 15em;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 section.section-3 div.products>img{
-    height: 15em;
+    height: 8em;
+    /* width: 10px; */
 }
 section.section-3 div.products p{
     font-size: 20px;
