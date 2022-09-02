@@ -221,9 +221,10 @@ section>div.nav>div.nav-icon-group>img{
     /* .row1 ands here */
     /* container starts here */
     section#section-2>div.container{
-        height: 80%;
+        height: 100%;
         width: auto;
         display: flex;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         /* border: 1px solid #bd9102; */
@@ -234,6 +235,7 @@ section>div.nav>div.nav-icon-group>img{
         flex-flow: column nowrap;
         gap: 10px;
         align-items: center;
+        display: none;/* turn this on*/
     }
     section#section-2>div.container>div.row1>h1{
         font-size: 48px;
@@ -391,7 +393,7 @@ section>div.row>div.col-1{
 
 /* form section starts here */
 section>div.row>div.col-1>form{
-    /* border: 1px solid #4f4d4e; */
+    border: 1px solid #4f4d4e;
     border:none;
     border-radius: 10px 10px 10px 10px;
     width: 35rem;
@@ -580,7 +582,7 @@ section>div.nav>ul{
     display: none;
     background-color: #ddddddb0;
     position: absolute;
-    top: 58px;
+    top: 0px;
 }
 /* nav logo */
 img#img-logo{
