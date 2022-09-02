@@ -213,7 +213,7 @@ section>div.nav>div.nav-icon-group>img{
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        height: 100%;
+        height: 110vh;
         /* border: 1px solid rgb(45, 129, 70); */
         display: flex;
         flex-flow: column nowrap;
@@ -289,10 +289,11 @@ section>div.nav>div.nav-icon-group>img{
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
+        /* overflow: scroll; */
     }
     section#section-2>div.container>div.row3>.col1{
         width: 45%;
-        /* height: 100%; */
+        height: 100%;
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
@@ -300,6 +301,8 @@ section>div.nav>div.nav-icon-group>img{
         border:2px solid #002a52;
         position: relative;
         gap: 20px;
+        overflow: scroll;
+
     }
     section#section-2>div.container>div.row3>.col1>.cart-nav-sec{
         width: 90%;
@@ -311,15 +314,22 @@ section>div.nav>div.nav-icon-group>img{
         border:2px solid #002a52;
     }
     section#section-2>div.container>div.row3>.col1>.cart-nav-sec>.go-back-icon,.go-back-icon{
-        width: 50px;
-        height: 50px;
+        width: 10%;
+        height: 70%;
         border: 2px solid greenyellow;
-        background-image: url("img/arrow_back.png");
+        /* background-image: url("img/arrow_back.png"); */
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
         left: 10px;
-        top: 0px;
+        top: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section#section-2>div.container>div.row3>.col1>.cart-nav-sec>.go-back-icon,.go-back-icon>img{
+        /* width: 50%; */
+        height: 80%;
     }
 
     /* individual products starts here */
@@ -332,7 +342,7 @@ section>div.nav>div.nav-icon-group>img{
         width: 90%;
     }
     section#section-2>div.container>div.row3>.col1>.single-product>img#single-product-view{
-        width: 130px;
+        width: 18%;
     }
     section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper{
         display: flex;
@@ -363,7 +373,7 @@ section>div.nav>div.nav-icon-group>img{
         border: 2px solid #00cc44;
     }
     section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize>.quantity-spec>.number-product{
-        width: 80px;
+        width: 60px;
         /* height: ; */
         border: 2px solid darkorange;
         display: flex;
@@ -375,28 +385,34 @@ section>div.nav>div.nav-icon-group>img{
     section#section-2>div.container>div.row3>.col1>.total-wrapper{
         border: 2px solid #701d62;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 90%;
-        position: absolute;
-        bottom: 0px;
-        /* margin-top: auto; */
+        /* position: absolute;
+        bottom: 0px; */
+        margin-top: auto;
     }
     section#section-2>div.container>div.row3>.col1>.total-wrapper>.total-text{
         font-size: 23px;
     }
     section#section-2>div.container>div.row3>.col1>.total-wrapper>button{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
-        width: 20em;
+        width: 30%;
+        height: 70%;
+        background-color: #4f4d4e;
+        color: #ffffff;
+        border: none;
+        border-radius: 0px;
+        font-size: 100%;
+        align-self: center;
     }
     /* individual products ends here */
     
     /*  section#section-2>div.container>div.row3>.col2 starts here */
     section#section-2>div.container>div.row3>.col2{
         width: 45%;
-        height: 100%;
-        width: 45%;
+        /* height: 100%; */
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
@@ -414,8 +430,111 @@ section>div.nav>div.nav-icon-group>img{
         position: relative;
         border:2px solid #002a52;
     }
-
-
+    /* card wrapper  */
+    section#section-2>div.container>div.row3>.col2>.card-amount-wrapper{
+        border: 2px solid greenyellow;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        /* height: 15em; */
+    }
+    section#section-2>div.container>div.row3>.col2>.card-amount-wrapper>img{
+        width: 10em;
+    }
+    section#section-2>div.container>div.row3>.col2>form{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        height: 50%;
+        border: 1px solid rgb(45, 129, 70);
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number>.card-number-input-group{
+        border: 1px solid rgb(255, 148, 7);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        /* width: 70%; */
+    }
+    
+    section#section-2>div.container>div.row3>.col2>form>.card-number>.card-number-input-group>input{
+        width: 20%;
+        height: 3em;
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number>.card-number-input-group>img{
+        width: 50px;
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number{
+        display: flex;
+        flex-flow: column nowrap;
+        border: 1px solid rgb(45, 129, 70);
+        justify-content: center;
+        width: 80%;
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number input{
+        width: 80%;
+        height: 3em;
+    }
+    /* card-expiry-date-group  */
+    section#section-2>div.container>div.row3>.col2>form>.card-expiry-date{
+        display: flex;
+        flex-flow: row wrap;
+        border: 1px solid rgb(45, 129, 70);
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+    }
+    /* card-expiry-date-group>input */
+    section#section-2>div.container>div.row3>.col2>form>.card-expiry-date>.card-expiry-date-group>input{
+        width: 90%;
+        height: 3em;
+    }
+    /* cvv input */
+    section#section-2>div.container>div.row3>.col2>form>.card-expiry-date>.card-CVV>input{
+        width: 50%;
+        height: 3em;
+    }
+    div.save-card{
+        width: 80%;
+        height: 3em;
+        border:2px solid #002a52;
+        display: flex;
+        flex-flow: row nowrap;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 10px;
+        
+    }
+    div.save-card>input{
+        width: 30px;
+        height: 20px;
+        
+    }
+    /* div.save-card>p{
+        font-size: 20px;
+    } */
+    /* pay secure button div */
+    section#section-2>div.container>div.row3>.col2>form>.btn-sec{
+        border:2px solid #2c73b6;
+        height: 10%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* pay secure button */
+    section#section-2>div.container>div.row3>.col2>form>.btn-sec>button{
+        width: 60%;
+        height: 100%;
+        background-color: #4f4d4e;
+        color: #ffffff;
+        border: none;
+        border-radius: 20px;
+    }
     /* section#section-2>div.container>div.row3 ends here */
 
     /* container ends here */
