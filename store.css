@@ -213,7 +213,7 @@ section>div.nav>div.nav-icon-group>img{
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        height: 110vh;
+        /* height: 110vh; */
         /* border: 1px solid rgb(45, 129, 70); */
         display: flex;
         flex-flow: column nowrap;
@@ -221,7 +221,7 @@ section>div.nav>div.nav-icon-group>img{
     /* .row1 ands here */
     /* container starts here */
     section#section-2>div.container{
-        height: 100%;
+        /* height: 100%; */
         width: auto;
         display: flex;
         flex-flow: column nowrap;
@@ -258,26 +258,85 @@ section>div.nav>div.nav-icon-group>img{
     /* section#section-2>div.container>div.row2 starts here */
     section#section-2>div.container>div.row2{
         border: 1px solid rgb(45, 129, 70);
-        height: 80%;
-        width: 90%;
+        /* height: 80%; */
+        /* width: 90%; */
         display: flex;
         flex-flow: row wrap;
 
     }
     section#section-2>div.container>div.row2>.col-1{
         width: 50%;
-        height: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
+        /* height: 100%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    section#section-2>div.container>div.row2>.col-1>img{
+        width: 60%;
+    }
+    
     section#section-2>div.container>div.row2>.col-2{
         width: 50%;
-        height: 100%;
+        /* height: 100%; */
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
+        align-content: center;
+        background-color: #4f4d4e33;
+        position: relative;
+    }
+    section#section-2>div.container>div.row2>.col-2>.btn-close-col-2{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    section#section-2>div.container>div.row2>.col-2>.btn-close-col-2>img{
+        height: 28px;
+    }
+    section#section-2>div.container>div.row2>.col-2>.product-name-wrapper{
+        /* border:2px solid #4f4d4e;
+        color: #ffffff; */
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap:20Px;
+    }
+    section#section-2>div.container>div.row2>.col-2>.product-name-wrapper>.row1,.row2{
+        border:2px solid #4f4d4e;
+        color: #ffffff;
+        width: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    section#section-2>div.container>div.row2>.col-2>.product-name-wrapper>.row2>p{
+        color: #ffffff;
+        /* align-self: center; */
+        /* justify-self: center; */
+    }
+    section#section-2>div.container>div.row2>.col-2>.description{
+        border:2px solid #4f4d4e;
+        width: 90%;
+        align-self: center;
+        font-size: 120%;
+    }
+    section#section-2>div.container>div.row2>.col-2>.description>p{
+        color: #ffffff;
+        
+    }
+    section#section-2>div.container>div.row2>.col-2>.btn-add-cart{
+        width: 90%;
+        align-self: center;
+        border:2px solid #2c73b6;
 
+    }
+    section#section-2>div.container>div.row2>.col-2 button{
+        width: 60%;
+        height: 50px;
+        background-color: #4f4d4e;
+        color: #ffffff;
+        border: none;
+        align-self: center;
     }
     /* section#section-2>div.container>div.row2 ends here */
 
@@ -351,11 +410,12 @@ section>div.nav>div.nav-icon-group>img{
         align-items: center;
         border: 2px solid #665f00;
         width: 78%;
-        height: 70%;
+        height: 90%;
     }
     .product-name-wrapper-text{
         border: 2px solid #c7ba00;
         width: 90%;
+        height: 50%;
         align-self: center;
     }
     section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize{
@@ -366,14 +426,23 @@ section>div.nav>div.nav-icon-group>img{
         align-items: center;
         align-self: center;
         width: 90%;
+        height: 50%;
     }
     section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize>.quantity-spec{
         display: flex;
         flex-flow: row nowrap;
         border: 2px solid #00cc44;
+        width: 40%;
+        justify-content: space-between;
     }
+
+        /* add and remove icon section */
+        .single-product>.product-name-wrapper>.single-prize>.quantity-spec img{
+            width: 30px;
+        }
+
     section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize>.quantity-spec>.number-product{
-        width: 60px;
+        width: 30px;
         /* height: ; */
         border: 2px solid darkorange;
         display: flex;
@@ -387,18 +456,18 @@ section>div.nav>div.nav-icon-group>img{
         display: flex;
         justify-content: space-between;
         width: 90%;
-        /* position: absolute;
-        bottom: 0px; */
-        margin-top: auto;
+        position: sticky;
+        bottom: 0px;
+        /* margin-top: auto; */
     }
     section#section-2>div.container>div.row3>.col1>.total-wrapper>.total-text{
-        font-size: 23px;
+        font-size: 20px;
     }
     section#section-2>div.container>div.row3>.col1>.total-wrapper>button{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        width: 30%;
+        width: 60%;
         height: 70%;
         background-color: #4f4d4e;
         color: #ffffff;
@@ -462,9 +531,19 @@ section>div.nav>div.nav-icon-group>img{
     }
     
     section#section-2>div.container>div.row3>.col2>form>.card-number>.card-number-input-group>input{
-        width: 20%;
+        width: 100%;
         height: 3em;
     }
+    
+    section#section-2>div.container>div.row3>.col2>form>.card-number p{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number img{
+        width: 40px;
+    }
+
     section#section-2>div.container>div.row3>.col2>form>.card-number>.card-number-input-group>img{
         width: 50px;
     }
@@ -476,13 +555,13 @@ section>div.nav>div.nav-icon-group>img{
         width: 80%;
     }
     section#section-2>div.container>div.row3>.col2>form>.card-number input{
-        width: 80%;
+        width: 99%;
         height: 3em;
     }
     /* card-expiry-date-group  */
     section#section-2>div.container>div.row3>.col2>form>.card-expiry-date{
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         border: 1px solid rgb(45, 129, 70);
         justify-content: space-between;
         align-items: center;
@@ -520,7 +599,7 @@ section>div.nav>div.nav-icon-group>img{
     /* pay secure button div */
     section#section-2>div.container>div.row3>.col2>form>.btn-sec{
         border:2px solid #2c73b6;
-        height: 10%;
+        height: 20%;
         width: 80%;
         display: flex;
         justify-content: center;
@@ -528,12 +607,12 @@ section>div.nav>div.nav-icon-group>img{
     }
     /* pay secure button */
     section#section-2>div.container>div.row3>.col2>form>.btn-sec>button{
-        width: 60%;
-        height: 100%;
+        width: 50%;
+        height: 50px;
         background-color: #4f4d4e;
         color: #ffffff;
         border: none;
-        border-radius: 20px;
+        border-radius: 25px;
     }
     /* section#section-2>div.container>div.row3 ends here */
 
@@ -541,7 +620,8 @@ section>div.nav>div.nav-icon-group>img{
 
 /* section-3 starts here */
     section.section-3{
-        height: 100%;
+        /* height: 100%; */
+        height: auto;
         /* border: 2px solid #0263bd; */
         display: flex;
         justify-content: center;
@@ -553,7 +633,8 @@ section>div.nav>div.nav-icon-group>img{
     section.section-3>div.row2{
         /* border: 2px solid #d13e3e; */
         width: 80vw;
-        height: 90vh;
+        /* height: 90vh; */
+        height: auto;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
@@ -620,30 +701,24 @@ section.section-3>button{
 
 
 @media screen  and (max-width: 899px) {
-    /* html{
-        padding: 0px;
-        margin: 0px;
-        width: 94%;
-        border: 2px solid #080408;
-        overflow: hidden;
-    } */
-    body{
-        height: auto;
-        width: auto;
-        /* background-color: #701d62; */
-        border: 2px solid #701d62;
-        /* font-family: Arial, Helvetica, sans-serif; */
-        /* background-image: url("img/jay.png"); */
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 0px;
-        margin: 0px;
-    }
-    
-    *{
-        margin: 0px ;
-        padding: 0px ;
-    }
+
+body{
+    height: auto;
+    width: auto;
+    /* background-color: #701d62; */
+    border: 2px solid #701d62;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* background-image: url("img/jay.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+
+*{
+    margin: 0px ;
+    padding: 0px ;
+}
 /*style for section-1 */
 section#section-1{
     width: auto;
@@ -702,6 +777,7 @@ div.text_wrapper>h1{
     font-size: 1.9rem;
     color: #272727;
 }
+
 p{
     font-size: 0.9rem;
     color: #272727;
@@ -739,25 +815,25 @@ input#input_signUp_password{
     font-size: 17px;
 }
 
-    /* password detector style */
-    .passwordIndicator{
-        display: none;
-        flex-flow: row nowrap;
-        /* border: 1px solid red; */
-        width: 16em;
-        height: 1em;
-        justify-content: space-evenly;
-        align-items: baseline;
-        /* align-content: center; */
-    }
-    .passwordIndicator>div.level{
-        border: 1px solid #ffffff;
-        width:2em;
-        height: 4px;
-    }
-    .passwordIndicator>p{
-        color: #ffffff;
-    }
+/* password detector style */
+.passwordIndicator{
+    display: none;
+    flex-flow: row nowrap;
+    /* border: 1px solid red; */
+    width: 16em;
+    height: 1em;
+    justify-content: space-evenly;
+    align-items: baseline;
+    /* align-content: center; */
+}
+.passwordIndicator>div.level{
+    border: 1px solid #ffffff;
+    width:2em;
+    height: 4px;
+}
+.passwordIndicator>p{
+    color: #ffffff;
+}
 
 section>div.row>div.col-1>form div.input_wrapper{
     border: 1px solid #4f4d4e;
@@ -814,7 +890,8 @@ section.section-2{
     background-repeat: no-repeat;
     background-position: center;
     /* width: 98%; */
-    height: 106vh;
+    /* height: 106vh; */
+    height: auto;
     border: 1px solid rgb(45, 129, 70);
     display: flex;
     flex-flow: column nowrap;
@@ -824,7 +901,7 @@ section.section-2{
     position: relative;
     padding: 0px;
 }
-/* .row1 ands here */
+/* .row1 ends here */
 
 /* nav bar starts here */
 section>div.nav{
@@ -857,14 +934,15 @@ section>div.nav>ul{
     flex-flow: column nowrap;
     list-style: none;
     border: 2px solid rgb(45, 129, 70) ;
-    width: 8em;
-    height: 15em;
+    width: 60%;
+    height: 19em;
     align-items: center;
     justify-content: space-evenly;
     display: none;
     background-color: #ddddddb0;
     position: absolute;
-    top: 0px;
+    top: 50px;
+    font-size: 21px;
 }
 /* nav logo */
 img#img-logo{
@@ -900,41 +978,422 @@ section>div.nav>div.nav-icon-group>img{
 /* nav bar ends here */
 
 
-    /* container starts here */
-    section#section-2>div.container{
-        height: 70%;
-        width: 90%;
+/* container starts here */
+section#section-2>div.container{
+    /* height: 100%; */
+    height: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #bd9102;
+}
+    
+section#section-2>div.container>div.row1{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    align-items: center;
+    display: none;
+}
+section#section-2>div.container>div.row1>h1{
+    font-size: 35px;
+    font-weight: 400;
+    /* color: #ffffff; */
+    
+}
+section#section-2>div.container>div.row1>p{
+    font-size: 20px;
+    font-weight: 500;
+}
+section>div.icon-down{
+    text-align: center;
+    border: 1px solid #0263bd;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* container ends here */
+
+
+    /* new sections starts here */
+
+    /* section#section-2>div.container>div.row2 starts here */
+    section#section-2>div.container>div.row2{
+        border: 1px solid rgb(45, 129, 70);
+        height: 98%;
+        /* width: 90%; */
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        /* display: none; */
+    }
+    section#section-2>div.container>div.row2>.col-1{
+        width: 100%;
+        height: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #bd9102;
+        position: relative;
+    }
+    section#section-2>div.container>div.row2>.col-1>img{
+        width: 40%;
+    }
+    section#section-2>div.container>div.row2>.col-1>.btn-close-col-1{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    section#section-2>div.container>div.row2>.col-1>.btn-close-col-1>img{
+        height: 28px;
     }
     
-    section#section-2>div.container>div.row1{
+    section#section-2>div.container>div.row2>.col-2{
+        width: 100%;
+        height: 60%;
         display: flex;
         flex-flow: column nowrap;
-        gap: 10px;
-        align-items: center;
+        justify-content: center;
+        align-content: center;
+        background-color: #4f4d4e33;
+        position: relative;
     }
-    section#section-2>div.container>div.row1>h1{
-        font-size: 35px;
-        font-weight: 400;
-        /* color: #ffffff; */
+    section#section-2>div.container>div.row2>.col-2>.btn-close-col-2{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: none;
+    }
+    section#section-2>div.container>div.row2>.col-2>.btn-close-col-2>img{
+        height: 28px;
+    }
+    section#section-2>div.container>div.row2>.col-2>.product-name-wrapper{
+        /* border:2px solid #4f4d4e;
+        color: #ffffff; */
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap:10Px;
+    }
+    section#section-2>div.container>div.row2>.col-2>.product-name-wrapper>.row1,.row2{
+        border:2px solid #4f4d4e;
+        color: #ffffff;
+        width: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    section#section-2>div.container>div.row2>.col-2>.product-name-wrapper>.row2>p{
+        color: #ffffff;
+        /* align-self: center; */
+        /* justify-self: center; */
+    }
+    section#section-2>div.container>div.row2>.col-2>.description{
+        border:2px solid #4f4d4e;
+        width: 90%;
+        align-self: center;
+        font-size: 120%;
+    }
+    section#section-2>div.container>div.row2>.col-2>.description>p{
+        color: #ffffff;
         
     }
-    section#section-2>div.container>div.row1>p{
-        font-size: 20px;
-        font-weight: 500;
+    section#section-2>div.container>div.row2>.col-2>.btn-add-cart{
+        width: 90%;
+        align-self: center;
+        border:2px solid #2c73b6;
+
     }
-    section>div.icon-down{
-        text-align: center;
-        border: 1px solid #0263bd;
-        height: 2.5em;
+    section#section-2>div.container>div.row2>.col-2 button{
+        width: 60%;
+        height: 50px;
+        background-color: #4f4d4e;
+        color: #ffffff;
+        border: none;
+        align-self: center;
+    }
+    /* section#section-2>div.container>div.row2 ends here */
+
+    /* section#section-2>div.container>div.row3 starts here */
+    section#section-2>div.container>div.row3{
+        border: 1px solid rgb(45, 129, 70);
+        height: 80%;
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        /* overflow: scroll; */
+        /* display: none; */
+    }
+    section#section-2>div.container>div.row3>.col1{
+        width: 100%;
+        /* height: 100%; */
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        border:2px solid #002a52;
+        position: relative;
+        gap: 20px;
+        overflow: scroll;
+        /* display: none; */
+    }
+    section#section-2>div.container>div.row3>.col1>.cart-nav-sec{
+        width: 90%;
+        height: 3.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border:2px solid #002a52;
+    }
+
+    section#section-2>div.container>div.row3>.col1>.cart-nav-sec>.go-back-icon,.go-back-icon{
+        width: 15%;
+        height: 70%;
+        border: 2px solid greenyellow;
+        /* background-image: url("img/arrow_back.png"); */
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 10px;
+        top: 10%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+    section#section-2>div.container>div.row3>.col1>.cart-nav-sec>.go-back-icon,.go-back-icon>img{
+        /* width: 50%; */
+        height: 80%;
+    }
+
+    /* individual products starts here */
+    section#section-2>div.container>div.row3>.col1>.single-product{
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #490066;
+        width: 90%;
+    }
+    section#section-2>div.container>div.row3>.col1>.single-product>img#single-product-view{
+        width: 25%;
+    }
+    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #665f00;
+        width: 67%;
+        height: 80%;
+    }
+    .product-name-wrapper-text{
+        border: 2px solid #c7ba00;
+        width: 90%;
+        height: 50%;
+        align-self: center;
+    }
+    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize{
+        display: flex;
+        flex-flow: row nowrap;
+        border: 2px solid #c7ba00;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        width: 90%;
+        height: 90%;
+    }
+    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize>.quantity-spec{
+        display: flex;
+        flex-flow: row nowrap;
+        border: 2px solid #00cc44;
+    }
+    /* add and remove icon section */
+    .single-product>.product-name-wrapper>.single-prize>.quantity-spec img{
+        width: 20px;
+    }
+    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize>.quantity-spec>.number-product{
+        width: 20px;
+        /* height: ; */
+        border: 2px solid darkorange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 19px;
+    }
+    /* total-wrapper */
+    section#section-2>div.container>div.row3>.col1>.total-wrapper{
+        border: 2px solid #701d62;
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        /* position: absolute;
+        bottom: 0px; */
+        /* margin-top: auto; */
+    }
+    section#section-2>div.container>div.row3>.col1>.total-wrapper>.total-text{
+        font-size: 19px;
+    }
+    section#section-2>div.container>div.row3>.col1>.total-wrapper>button{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 60%;
+        height: 70%;
+        background-color: #4f4d4e;
+        color: #ffffff;
+        border: none;
+        border-radius: 0px;
+        font-size: 100%;
+        align-self: center;
+    }
+    /* individual products ends here */
+    
+    /*  section#section-2>div.container>div.row3>.col2 starts here */
+    section#section-2>div.container>div.row3>.col2{
+        width: 100%;
+        /* height: 100%; */
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        border:2px solid #002a52;
+        position: relative;
+        gap: 20px;
+        /* display: none; */
+    }
+    section#section-2>div.container>div.row3>.col2>.checkout-nav-sec{
+        width: 90%;
+        height: 3.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border:2px solid #002a52;
+    }
+    /* card wrapper  */
+    section#section-2>div.container>div.row3>.col2>.card-amount-wrapper{
+        border: 2px solid greenyellow;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        /* height: 15em; */
+    }
+    section#section-2>div.container>div.row3>.col2>.card-amount-wrapper>img{
+        width: 10em;
+    }
+    section#section-2>div.container>div.row3>.col2>p{
+        /* width: 90%; */
+        font-size: 20px;
+    }
+    section#section-2>div.container>div.row3>.col2>form{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        height: 50%;
+        border: 1px solid rgb(45, 129, 70);
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number>.card-number-input-group{
+        border: 1px solid rgb(255, 148, 7);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        /* width: 70%; */
+    }
+    
+    section#section-2>div.container>div.row3>.col2>form>.card-number>.card-number-input-group>input{
+        width: 100%;
+        height: 3em;
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number p{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number img{
+        width: 40px;
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number{
+        display: flex;
+        flex-flow: column nowrap;
+        border: 1px solid rgb(45, 129, 70);
+        justify-content: center;
+        width: 95%;
+    }
+    section#section-2>div.container>div.row3>.col2>form>.card-number input{
+        width: 99%;
+        height: 3em;
+    }
+    /* card-expiry-date-group  */
+    section#section-2>div.container>div.row3>.col2>form>.card-expiry-date{
+        display: flex;
+        flex-flow: row nowrap;
+        border: 1px solid rgb(45, 129, 70);
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+    }
+    /* card-expiry-date-group>input */
+    section#section-2>div.container>div.row3>.col2>form>.card-expiry-date>.card-expiry-date-group>input{
+        width: 90%;
+        height: 3em;
+    }
+    /* cvv input */
+    section#section-2>div.container>div.row3>.col2>form>.card-expiry-date>.card-CVV>input{
+        width: 50%;
+        height: 3em;
+    }
+    div.save-card{
+        width: 80%;
+        height: 3em;
+        border:2px solid #002a52;
+        display: flex;
+        flex-flow: row nowrap;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 10px;
+        
+    }
+    div.save-card>input{
+        width: 30px;
+        height: 20px;
+        
+    }
+    /* div.save-card>p{
+        font-size: 20px;
+    } */
+    /* pay secure button div */
+    section#section-2>div.container>div.row3>.col2>form>.btn-sec{
+        border:2px solid #2c73b6;
+        height: 20%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* pay secure button */
+    section#section-2>div.container>div.row3>.col2>form>.btn-sec>button{
+        width: 70%;
+        height: 50px;
+        background-color: #4f4d4e;
+        color: #ffffff;
+        border: none;
+        border-radius: 25px;
+    }
+    /* section#section-2>div.container>div.row3 ends here */
+
     /* container ends here */
+    
+    /* new sections ends here */
+
+
 
 /* section-3 starts here */
     section.section-3{
@@ -949,6 +1408,7 @@ section>div.nav>div.nav-icon-group>img{
         gap: 20px;
         margin: 0px;
         padding: 0px;
+        display: none;
     }
     section.section-3>div.row2{
         border: 2px solid #d13e3e;
