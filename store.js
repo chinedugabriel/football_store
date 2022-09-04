@@ -92,6 +92,15 @@ signUpPassword.addEventListener("change", passwordStrengthChecker);
 let registerForm = document.getElementById("register");
 let loginForm = document.getElementById("login");
 
+// Quick login
+let btnQuickLogin = document.getElementById("quick-login");
+
+// this function shows the login form 
+btnQuickLogin.addEventListener("click",()=>{
+    registerForm.style.display = "none";
+    loginForm.style.display = "flex";
+})
+
 // makes the form section to display in flex
 registerForm.style.display = "flex";
 
@@ -108,6 +117,8 @@ registerForm.style.display = "flex";
         }
     }
     document.getElementById("btn-signUp").addEventListener("click", toggleFormSection);
+
+
     // section-1
     let section_1 = document.getElementById("section-1");
 
@@ -124,7 +135,7 @@ registerForm.style.display = "flex";
     let imgList = ["img/slider_img/bg1.png", "img/slider_img/bg5.png"];
     let num = 0;
 
-    // slider function
+// slider function
     function section_slider(){
         if(num <= imgList.length-1){
             section_2.style.backgroundImage = `url(${imgList[num]})`;
