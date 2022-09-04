@@ -5,7 +5,17 @@ let input_email = document.getElementById("email");
 // login button var..
 let loginBtn = document.getElementById("btn-login"); 
 
+// section-1
+let section_1 = document.getElementById("section-1");
 
+// row-1 landing page text var..
+let row_1 = document.getElementById("row-1");
+
+// row-2 holds the product details
+let row_2_productDetails = document.getElementById("row-2");
+
+// row-3 holds the cart and checkout section
+let row_3_cartCheckout = document.getElementById("row-3");
 
 // login view icon
 let icon_view = document.getElementById("icon_view");
@@ -135,16 +145,15 @@ loginBtn
 */ 
 if(input_email.value !="" && input_password.value !=""){
     section_1.style.display = "none";
+    row_1.style.display = "flex";
 }else{
     input_email.style.border ="1px solid red";
     input_password.style.border ="1px solid red";
 }
 
 }
-loginBtn.addEventListener("click", validateLoginForm)
+loginBtn.addEventListener("click", validateLoginForm);
 
-    // section-1
-    let section_1 = document.getElementById("section-1");
 
     /*+++++++++++++++++++++++++++++++++++++++++++++++++*/ 
     // section display is disabled here

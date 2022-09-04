@@ -265,6 +265,7 @@ section>div.nav>div.nav-icon-group>img{
         /* width: 90%; */
         display: flex;
         flex-flow: row wrap;
+        /* display: none; */
 
     }
     section#section-2>div.container>div.row2>.col-1{
