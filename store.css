@@ -237,8 +237,8 @@ section>div.nav>div.nav-icon-group>img{
         /* justify-content: center; */
         /* align-items: center; */
         /* turn this on*/
-        /* display: none; */
         /* height: 100vh; */
+        display: none;
     }
     section#section-2>div.container>div.row1>h1{
         font-size: 48px;

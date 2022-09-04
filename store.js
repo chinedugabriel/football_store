@@ -2,6 +2,12 @@
 let input_password = document.getElementById("input_password");
 let input_email = document.getElementById("email");
 
+// login button var..
+let loginBtn = document.getElementById("btn-login"); 
+
+
+
+// login view icon
 let icon_view = document.getElementById("icon_view");
 
 let icon_btn_toggle= document.getElementById("click_preView");
@@ -113,11 +119,29 @@ registerForm.style.display = "flex";
             input_password.value = signUpPassword.value;
             input_email.value = signUpEmail.value;
         }else{
-            alert("SignUp to join");
+            // alert("SignUp to join");
+            signUpEmail.style.border ="1px solid red";
+            signUpPassword.style.border ="1px solid red";
         }
     }
     document.getElementById("btn-signUp").addEventListener("click", toggleFormSection);
 
+// this function checks the login form if it's value are empty add a 1px red border, if not hide section one which holds the forms and shows the store 
+const validateLoginForm = ()=>{
+    /*
+input_password
+input_email
+loginBtn 
+*/ 
+if(input_email.value !="" && input_password.value !=""){
+    section_1.style.display = "none";
+}else{
+    input_email.style.border ="1px solid red";
+    input_password.style.border ="1px solid red";
+}
+
+}
+loginBtn.addEventListener("click", validateLoginForm)
 
     // section-1
     let section_1 = document.getElementById("section-1");
