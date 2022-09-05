@@ -11,11 +11,23 @@ let section_1 = document.getElementById("section-1");
 // row-1 landing page text var..
 let row_1 = document.getElementById("row-1");
 
-// row-2 holds the product details
+// row-2 holds the product details (product description)
 let row_2_productDetails = document.getElementById("row-2");
+// row-2> product-img-detail-sec holds the product image
+let imagForProduct_detail = document.getElementById("product-img-detail-sec");
+
+// product-name-detail-sec
+let productName_detail = document.getElementById("product-name-detail-sec")
 
 // row-3 holds the cart and checkout section
 let row_3_cartCheckout = document.getElementById("row-3");
+
+// section-3 holds individual products section
+let section_3 = document.getElementById("section-3");
+
+// section-row-2 holds individual products more like a product gallery
+let section_3_row = document.getElementById("section-row");
+
 
 // login view icon
 let icon_view = document.getElementById("icon_view");
@@ -131,7 +143,7 @@ registerForm.style.display = "flex";
         }else{
             // alert("SignUp to join");
             signUpEmail.style.border ="1px solid red";
-            signUpPassword.style.border ="1px solid red";
+            document.getElementById("singUp_wrapper").style.border ="1px solid red";
         }
     }
     document.getElementById("btn-signUp").addEventListener("click", toggleFormSection);
@@ -148,7 +160,7 @@ if(input_email.value !="" && input_password.value !=""){
     row_1.style.display = "flex";
 }else{
     input_email.style.border ="1px solid red";
-    input_password.style.border ="1px solid red";
+    document.getElementById("input-wrapper").style.border ="1px solid red";
 }
 
 }

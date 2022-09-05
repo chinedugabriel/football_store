@@ -78,6 +78,7 @@ input#email,input#email-signUp{
     font-weight: 100;
     font-size: 17px;
 }
+
 input#input_password{
     width: 20rem;
     height: 2.5rem;
@@ -87,6 +88,7 @@ input#input_password{
     font-weight: 100;
     font-size: 17px;
 }
+
 input#input_signUp_password{
     width: 23rem;
     height: 2.5rem;
@@ -397,9 +399,23 @@ section>div.nav>div.nav-icon-group>img{
         /* width: 50%; */
         height: 80%;
     }
+    /* product list section starts here */
+    .product-list{
+        width: 98%;
+        height: 80%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        padding-top: 10px;
+        border: 2px solid #fc00d2;
+        overflow: scroll;
+    }
+    /* product list section ends here */
 
     /* individual products starts here */
-    section#section-2>div.container>div.row3>.col1>.single-product{
+    section#section-2>div.container>div.row3>.col1 .single-product{
         display: flex;
         flex-flow: row;
         align-items: center;
@@ -407,10 +423,10 @@ section>div.nav>div.nav-icon-group>img{
         border: 2px solid #490066;
         width: 90%;
     }
-    section#section-2>div.container>div.row3>.col1>.single-product>img#single-product-view{
+    section#section-2>div.container>div.row3>.col1 .single-product>img#single-product-view{
         width: 18%;
     }
-    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper{
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper{
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -425,7 +441,7 @@ section>div.nav>div.nav-icon-group>img{
         height: 50%;
         align-self: center;
     }
-    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize{
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper>.single-prize{
         display: flex;
         flex-flow: row nowrap;
         border: 2px solid #c7ba00;
@@ -435,7 +451,7 @@ section>div.nav>div.nav-icon-group>img{
         width: 90%;
         height: 50%;
     }
-    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize>.quantity-spec{
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper>.single-prize>.quantity-spec{
         display: flex;
         flex-flow: row nowrap;
         border: 2px solid #00cc44;
@@ -448,7 +464,7 @@ section>div.nav>div.nav-icon-group>img{
             width: 30px;
         }
 
-    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize>.quantity-spec>.number-product{
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper>.single-prize>.quantity-spec>.number-product{
         width: 30px;
         /* height: ; */
         border: 2px solid darkorange;
@@ -1179,7 +1195,7 @@ section>div.icon-down{
     }
 
     /* individual products starts here */
-    section#section-2>div.container>div.row3>.col1>.single-product{
+    section#section-2>div.container>div.row3>.col1 .single-product{
         display: flex;
         flex-flow: row;
         align-items: center;
@@ -1187,10 +1203,10 @@ section>div.icon-down{
         border: 2px solid #490066;
         width: 90%;
     }
-    section#section-2>div.container>div.row3>.col1>.single-product>img#single-product-view{
+    section#section-2>div.container>div.row3>.col1 .single-product>img#single-product-view{
         width: 25%;
     }
-    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper{
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper{
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -1205,7 +1221,7 @@ section>div.icon-down{
         height: 50%;
         align-self: center;
     }
-    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize{
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper>.single-prize{
         display: flex;
         flex-flow: row nowrap;
         border: 2px solid #c7ba00;
@@ -1215,7 +1231,7 @@ section>div.icon-down{
         width: 90%;
         height: 90%;
     }
-    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize>.quantity-spec{
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper>.single-prize>.quantity-spec{
         display: flex;
         flex-flow: row nowrap;
         border: 2px solid #00cc44;
@@ -1224,7 +1240,7 @@ section>div.icon-down{
     .single-product>.product-name-wrapper>.single-prize>.quantity-spec img{
         width: 20px;
     }
-    section#section-2>div.container>div.row3>.col1>.single-product>.product-name-wrapper>.single-prize>.quantity-spec>.number-product{
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper>.single-prize>.quantity-spec>.number-product{
         width: 20px;
         /* height: ; */
         border: 2px solid darkorange;
@@ -1251,13 +1267,16 @@ section>div.icon-down{
         justify-content: space-evenly;
         align-items: center;
         width: 60%;
-        height: 70%;
+        height: 40px;
         background-color: #4f4d4e;
         color: #ffffff;
         border: none;
         border-radius: 0px;
-        font-size: 100%;
+        font-size: 90%;
         align-self: center;
+    }
+    section#section-2>div.container>div.row3>.col1>.total-wrapper>button>img{
+        width: 20px;
     }
     /* individual products ends here */
     
