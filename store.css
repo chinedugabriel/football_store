@@ -267,7 +267,7 @@ section>div.nav>div.nav-icon-group>img{
         /* width: 90%; */
         display: flex;
         flex-flow: row wrap;
-        /* display: none; */
+        display: none;
 
     }
     section#section-2>div.container>div.row2>.col-1{
@@ -298,6 +298,7 @@ section>div.nav>div.nav-icon-group>img{
         position: absolute;
         top: 0px;
         right: 0px;
+        cursor: pointer;
     }
     section#section-2>div.container>div.row2>.col-2>.btn-close-col-2>img{
         height: 28px;
@@ -1064,12 +1065,14 @@ section>div.icon-down{
         position: relative;
     }
     section#section-2>div.container>div.row2>.col-1>img{
-        width: 40%;
+        width: 277px;
     }
     section#section-2>div.container>div.row2>.col-1>.btn-close-col-1{
         position: absolute;
         top: 0px;
         right: 0px;
+        display: flex;
+        
     }
     section#section-2>div.container>div.row2>.col-1>.btn-close-col-1>img{
         height: 28px;

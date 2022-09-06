@@ -16,8 +16,16 @@ let row_2_productDetails = document.getElementById("row-2");
 // row-2> product-img-detail-sec holds the product image
 let imagForProduct_detail = document.getElementById("product-img-detail-sec");
 
+// this holds the price of the product in the details section
+let amount_description = document.getElementById("amount-description");
+
 // product-name-detail-sec
-let productName_detail = document.getElementById("product-name-detail-sec")
+let productName_detail = document.getElementById("product-name-detail-sec");
+
+// btn-close-product-description 
+let btn_close_product_description = document.getElementById("btn-close-product-description");
+// btn-close-product-description 
+let btn_close_product_description_mobile = document.getElementById("btn-close-product-description-mobile");
 
 // row-3 holds the cart and checkout section
 let row_3_cartCheckout = document.getElementById("row-3");
@@ -207,3 +215,54 @@ loginBtn.addEventListener("click", validateLoginForm);
     }
     // this triggers the toggle btn
     btn_toggle_nav.addEventListener("click", toggleNav);
+
+
+    // this holds each products from the product gallery
+
+    let product = document.getElementById("product");
+    let product_2 = document.getElementById("product-2");
+    let product_3 = document.getElementById("product-3");
+    let product_4 = document.getElementById("product-4");
+    let product_5 = document.getElementById("product-5");
+    let product_6 = document.getElementById("product-6");
+    let product_7 = document.getElementById("product-7");
+    let product_8 = document.getElementById("product-8");
+    // let product = document.getElementsByClassName("product-view");
+    
+
+    function selectProductToDetailsSection(p){
+
+        row_2_productDetails.style.display = "flex";
+        // console.log(p.getElementsByTagName("img")[0].src);
+        // console.log(p.getElementsByTagName("p")[0].innerHTML);
+        // console.log(p.getElementsByTagName("h2")[0].innerHTML);
+
+        let cutText = `${p.getElementsByTagName("p")[0].innerHTML}`
+
+        imagForProduct_detail.src =`${p.getElementsByTagName("img")[0].src}`;
+
+        productName_detail.innerHTML = p.getElementsByTagName("h2")[0].innerHTML;
+
+        amount_description.innerHTML = `$${cutText.slice(1)}`;
+
+        btn_close_product_description.addEventListener("click", ()=>{
+            row_2_productDetails.style.display = "none";
+        });
+        btn_close_product_description_mobile.addEventListener("click", ()=>{
+            row_2_productDetails.style.display = "none";
+        });
+
+    }
+    product.addEventListener("click", ()=>{selectProductToDetailsSection(product)});
+    product_2.addEventListener("click", ()=>{selectProductToDetailsSection(product_2)});
+    product_3.addEventListener("click", ()=>{selectProductToDetailsSection(product_3)});
+    product_4.addEventListener("click", ()=>{selectProductToDetailsSection(product_4)});
+    product_5.addEventListener("click", ()=>{selectProductToDetailsSection(product_5)});
+    product_6.addEventListener("click", ()=>{selectProductToDetailsSection(product_6)});
+    product_7.addEventListener("click", ()=>{selectProductToDetailsSection(product_7)});
+    product_8.addEventListener("click", ()=>{selectProductToDetailsSection(product_8)});
+    // section_3_row.children.addEventListener("click", selectProductToDetailsSection);
+    // section_3_row.querySelectorAll(".products").addEventListener("click", selectProductToDetailsSection);
+    
+    // console.log(section_3_row.children[0].innerHTML);
+    
