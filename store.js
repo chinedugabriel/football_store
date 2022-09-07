@@ -266,32 +266,8 @@ loginBtn.addEventListener("click", validateLoginForm);
     product_7.addEventListener("click", ()=>{selectProductToDetailsSection(product_7)});
     product_8.addEventListener("click", ()=>{selectProductToDetailsSection(product_8)});
 
-    // section_3_row.children.addEventListener("click", selectProductToDetailsSection);
-    // section_3_row.querySelectorAll(".products").addEventListener("click", selectProductToDetailsSection);
-    
-    // console.log(section_3_row.children[0].innerHTML);
     
 
-    // HTML template of products added
-    /*
-<div class="single-product">
-    <img src="img/products/450.png" id="single-product-view">
-    <div class="product-name-wrapper">
-        <div class="product-name-wrapper-text">
-            <h3>Push sety</h3>
-            <p>size</p>
-        </div>
-        <div class="single-prize">
-            <p id="amount">$11</p>
-            <div class="quantity-spec">
-                <img src="img/remove_icon.png">
-                <div class="number-product"id="number-product">1</div>
-                <img src="img/add_icon.png">
-            </div>
-        </div>
-    </div>
-</div>
-    */ 
 
 // parent veriable needed => product_in_cart
 // all the individual add to cart button from th product gallery 
@@ -332,7 +308,17 @@ function addToCart(p){
     
     product_in_cart.innerHTML += result;
 
-    // console.log(product_in_cart.getElementsByClassName("single-product").length);
+    let cartNumber = document.getElementById("cart-number");
+
+    // this displays the number of items in the cart when it is greater than or = 1
+    if(product_in_cart.getElementsByClassName("single-product").length >= 1){
+        cartNumber.style.display ="flex";
+        // this counts the number of items in the cart list and displays it
+        cartNumber.innerHTML = product_in_cart.getElementsByClassName("single-product").length;
+    }else{
+        cartNumber.style.display = "none";
+    }
+
 
 }
 
