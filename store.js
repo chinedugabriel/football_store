@@ -36,6 +36,9 @@ let section_3 = document.getElementById("section-3");
 // section-row-2 holds individual products more like a product gallery
 let section_3_row = document.getElementById("section-row");
 
+// product-list holds the product that is been added to the chart
+let product_in_cart = document.getElementById("product-list");
+
 
 // login view icon
 let icon_view = document.getElementById("icon_view");
@@ -253,6 +256,7 @@ loginBtn.addEventListener("click", validateLoginForm);
         });
 
     }
+    // 
     product.addEventListener("click", ()=>{selectProductToDetailsSection(product)});
     product_2.addEventListener("click", ()=>{selectProductToDetailsSection(product_2)});
     product_3.addEventListener("click", ()=>{selectProductToDetailsSection(product_3)});
@@ -261,8 +265,106 @@ loginBtn.addEventListener("click", validateLoginForm);
     product_6.addEventListener("click", ()=>{selectProductToDetailsSection(product_6)});
     product_7.addEventListener("click", ()=>{selectProductToDetailsSection(product_7)});
     product_8.addEventListener("click", ()=>{selectProductToDetailsSection(product_8)});
+
     // section_3_row.children.addEventListener("click", selectProductToDetailsSection);
     // section_3_row.querySelectorAll(".products").addEventListener("click", selectProductToDetailsSection);
     
     // console.log(section_3_row.children[0].innerHTML);
     
+
+    // HTML template of products added
+    /*
+<div class="single-product">
+    <img src="img/products/450.png" id="single-product-view">
+    <div class="product-name-wrapper">
+        <div class="product-name-wrapper-text">
+            <h3>Push sety</h3>
+            <p>size</p>
+        </div>
+        <div class="single-prize">
+            <p id="amount">$11</p>
+            <div class="quantity-spec">
+                <img src="img/remove_icon.png">
+                <div class="number-product"id="number-product">1</div>
+                <img src="img/add_icon.png">
+            </div>
+        </div>
+    </div>
+</div>
+    */ 
+
+// parent veriable needed => product_in_cart
+// all the individual add to cart button from th product gallery 
+let add_to_cart = document.getElementById("add-to-cart");
+let add_to_cart_2 = document.getElementById("add-to-cart-2");
+let add_to_cart_3 = document.getElementById("add-to-cart-3");
+let add_to_cart_4 = document.getElementById("add-to-cart-4");
+let add_to_cart_5 = document.getElementById("add-to-cart-5");
+let add_to_cart_6 = document.getElementById("add-to-cart-6");
+let add_to_cart_7 = document.getElementById("add-to-cart-7");
+let add_to_cart_8 = document.getElementById("add-to-cart-8");
+
+
+let n = 0;
+function addToCart(p){
+    n++;
+    
+    let result = "";
+    result = `
+    <div class="single-product">
+    <img src="${p.getElementsByTagName("img")[0].src}" id="single-product-view">
+    <div class="product-name-wrapper">
+    <div class="product-name-wrapper-text">
+    <h3>${p.getElementsByTagName("h2")[0].innerHTML}</h3>
+    <p>size</p>
+    </div>
+    <div class="single-prize">
+    <p id="amount">${p.getElementsByTagName("p")[0].innerHTML}</p>
+    <div class="quantity-spec">
+    <img src="img/remove_icon.png">
+    <div class="number-product"id="number-product">${n}</div>
+    <img src="img/add_icon.png">
+    </div>
+    </div>
+    </div>
+    </div>
+    `;
+    
+    product_in_cart.innerHTML += result;
+
+    // console.log(product_in_cart.getElementsByClassName("single-product").length);
+
+}
+
+add_to_cart.addEventListener("click", ()=>{
+    addToCart(product);
+    
+})
+add_to_cart_2.addEventListener("click", ()=>{
+    addToCart(product_2);
+    
+})
+add_to_cart_3.addEventListener("click", ()=>{
+    addToCart(product_3);
+    
+})
+add_to_cart_4.addEventListener("click", ()=>{
+    addToCart(product_4);
+    
+})
+add_to_cart_5.addEventListener("click", ()=>{
+    addToCart(product_5);
+    
+})
+add_to_cart_6.addEventListener("click", ()=>{
+    addToCart(product_6);
+    
+})
+add_to_cart_7.addEventListener("click", ()=>{
+    addToCart(product_7);
+    
+})
+add_to_cart_8.addEventListener("click", ()=>{
+    addToCart(product_8);
+    
+})
