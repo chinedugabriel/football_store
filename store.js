@@ -220,7 +220,7 @@ loginBtn.addEventListener("click", validateLoginForm);
     btn_toggle_nav.addEventListener("click", toggleNav);
 
 
-    // this holds each products from the product gallery
+    // this holds each product id from the product gallery
 
     let product = document.getElementById("product");
     let product_2 = document.getElementById("product-2");
@@ -233,21 +233,34 @@ loginBtn.addEventListener("click", validateLoginForm);
     // let product = document.getElementsByClassName("product-view");
     
 
-    function selectProductToDetailsSection(p){
+    function selectProductToDetailsSection(p,add){
 
         row_2_productDetails.style.display = "flex";
         // console.log(p.getElementsByTagName("img")[0].src);
         // console.log(p.getElementsByTagName("p")[0].innerHTML);
         // console.log(p.getElementsByTagName("h2")[0].innerHTML);
 
-        let cutText = `${p.getElementsByTagName("p")[0].innerHTML}`
-
+        // this here helps to change the text of the product name description
+        let cutText = `${p.getElementsByTagName("p")[0].innerHTML}`;
+        
+        // this helps to change the text of the product name description
         imagForProduct_detail.src =`${p.getElementsByTagName("img")[0].src}`;
 
         productName_detail.innerHTML = p.getElementsByTagName("h2")[0].innerHTML;
 
         amount_description.innerHTML = `$${cutText.slice(1)}`;
 
+
+        // This sets the id on the button in the product description so as to enable the user to add the viewed product to cart
+        document.getElementsByClassName("btn-add-cart")[0].id =`${add}`;
+        // this calls the add to cart function with their respective parameter from the argument p 
+        document.getElementsByClassName("btn-add-cart")[0].addEventListener("click", ()=>{
+            addToCart(p);
+            p = "";
+
+        });
+
+        // this helps to close the My cart list section on deskTop and mobile
         btn_close_product_description.addEventListener("click", ()=>{
             row_2_productDetails.style.display = "none";
         });
@@ -257,14 +270,14 @@ loginBtn.addEventListener("click", validateLoginForm);
 
     }
     // 
-    product.addEventListener("click", ()=>{selectProductToDetailsSection(product)});
-    product_2.addEventListener("click", ()=>{selectProductToDetailsSection(product_2)});
-    product_3.addEventListener("click", ()=>{selectProductToDetailsSection(product_3)});
-    product_4.addEventListener("click", ()=>{selectProductToDetailsSection(product_4)});
-    product_5.addEventListener("click", ()=>{selectProductToDetailsSection(product_5)});
-    product_6.addEventListener("click", ()=>{selectProductToDetailsSection(product_6)});
-    product_7.addEventListener("click", ()=>{selectProductToDetailsSection(product_7)});
-    product_8.addEventListener("click", ()=>{selectProductToDetailsSection(product_8)});
+    product.addEventListener("click", ()=>{selectProductToDetailsSection(product, add_to_cart)});
+    product_2.addEventListener("click", ()=>{selectProductToDetailsSection(product_2, add_to_cart_2)});
+    product_3.addEventListener("click", ()=>{selectProductToDetailsSection(product_3, add_to_cart_3)});
+    product_4.addEventListener("click", ()=>{selectProductToDetailsSection(product_4, add_to_cart_4)});
+    product_5.addEventListener("click", ()=>{selectProductToDetailsSection(product_5, add_to_cart_5)});
+    product_6.addEventListener("click", ()=>{selectProductToDetailsSection(product_6, add_to_cart_6)});
+    product_7.addEventListener("click", ()=>{selectProductToDetailsSection(product_7, add_to_cart_7)});
+    product_8.addEventListener("click", ()=>{selectProductToDetailsSection(product_8), add_to_cart_8});
 
     
 
@@ -339,7 +352,7 @@ add_to_cart_4.addEventListener("click", ()=>{
     
 })
 add_to_cart_5.addEventListener("click", ()=>{
-    addToCart(product_5);
+    addToCart(product_5); 
     
 })
 add_to_cart_6.addEventListener("click", ()=>{
