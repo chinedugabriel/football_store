@@ -269,6 +269,7 @@ loginBtn.addEventListener("click", validateLoginForm);
             row_2_productDetails.style.display = "none";
         });
 
+
     }
     // this add's an a click event to get the image, name and the price of each product from the product gallery to the product description section
     product.addEventListener("click", ()=>{selectProductToDetailsSection(product, add_to_cart)});
@@ -294,6 +295,8 @@ let add_to_cart_6 = document.getElementById("add-to-cart-6");
 let add_to_cart_7 = document.getElementById("add-to-cart-7");
 let add_to_cart_8 = document.getElementById("add-to-cart-8");
 
+// this shows the number of items in the cart list
+let cartNumber = document.getElementById("cart-number");
 
 let n = 0;
 function addToCart(p){
@@ -312,11 +315,9 @@ function addToCart(p){
     </div>
     <div class="single-prize">
     <p id="amount">${p.getElementsByTagName("p")[0].innerHTML}</p>
-    <div class="quantity-spec">
-    <img src="img/remove_icon.png">
-    <div class="number-product"id="number-product">${n}</div>
-    <img src="img/add_icon.png">
-    </div>
+        <div class="quantity-spec">
+            <img src="img/delete_Icon.png" alt="Clear_icon"id="clear_cart">
+        </div>
     </div>
     </div>
     </div>
@@ -324,7 +325,7 @@ function addToCart(p){
     
     product_in_cart.innerHTML += result;
 
-    let cartNumber = document.getElementById("cart-number");
+    // cartNumber shows the number of items in the cart list
 
     // this displays the number of items in the cart when it is greater than or = 1
     if(product_in_cart.getElementsByClassName("single-product").length >= 1){
@@ -373,4 +374,27 @@ add_to_cart_8.addEventListener("click", ()=>{
     
 })
 
+// this holds the icon from the MyCart Nav section from the HTML
+let clearAll_icon = document.getElementById("clear_cart");
+// this function clears the cart
+function clearCart(){
+    if(product_in_cart.innerHTML == ""){
+        product_in_cart.innerHTML = "<h1> Already Empty </h1>";
+        // this counts the number of items in the cart list and displays it
+        cartNumber.style.display ="flex";
+        cartNumber.innerHTML = 0;
+        
+        setTimeout(()=>{
+            product_in_cart.innerHTML = "";
+            cartNumber.innerHTML = "";
+            cartNumber.style.display ="none";
+        },3000)
+        
+    }else{
+        cartNumber.innerHTML = "";
+        product_in_cart.innerHTML = "";
+        cartNumber.style.display ="none";
+    }
+}
 
+clearAll_icon.addEventListener("click", clearCart);

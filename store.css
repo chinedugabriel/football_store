@@ -420,6 +420,13 @@ section>div.nav>div.nav-icon-group>.cartnumber{
         /* width: 50%; */
         height: 80%;
     }
+    section#section-2>div.container>div.row3>.col1>.cart-nav-sec>img{
+        /* width: 50%; */
+        height: 75%;
+        position: absolute;
+        right: 0;
+        top: 5;
+    }
     /* product list section starts here */
     .product-list{
         width: 98%;
@@ -477,7 +484,10 @@ section>div.nav>div.nav-icon-group>.cartnumber{
         flex-flow: row nowrap;
         border: 2px solid #00cc44;
         width: 40%;
-        justify-content: space-between;
+        justify-content: flex-end;
+    }
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper>.single-prize>.quantity-spec>img{
+        width: 25%;
     }
 
         /* add and remove icon section */
@@ -1277,6 +1287,11 @@ section>div.icon-down{
         flex-flow: row nowrap;
         border: 2px solid #00cc44;
     }
+
+    section#section-2>div.container>div.row3>.col1 .single-product>.product-name-wrapper>.single-prize>.quantity-spec>img{
+        width: 33%;
+    }
+
     /* add and remove icon section */
     .single-product>.product-name-wrapper>.single-prize>.quantity-spec img{
         width: 20px;
