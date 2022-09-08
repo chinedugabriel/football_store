@@ -220,6 +220,7 @@ loginBtn.addEventListener("click", validateLoginForm);
     btn_toggle_nav.addEventListener("click", toggleNav);
 
 
+
     // this holds each product id from the product gallery
 
     let product = document.getElementById("product");
@@ -269,7 +270,7 @@ loginBtn.addEventListener("click", validateLoginForm);
         });
 
     }
-    // 
+    // this add's an a click event to get the image, name and the price of each product from the product gallery to the product description section
     product.addEventListener("click", ()=>{selectProductToDetailsSection(product, add_to_cart)});
     product_2.addEventListener("click", ()=>{selectProductToDetailsSection(product_2, add_to_cart_2)});
     product_3.addEventListener("click", ()=>{selectProductToDetailsSection(product_3, add_to_cart_3)});
@@ -298,6 +299,8 @@ let n = 0;
 function addToCart(p){
     n++;
     
+    // This helps to get the value of the product that is been click on such as the image, name and the price of the product
+
     let result = "";
     result = `
     <div class="single-product">
@@ -335,6 +338,8 @@ function addToCart(p){
 
 }
 
+// this add a click event to the cart icon on each of the product
+
 add_to_cart.addEventListener("click", ()=>{
     addToCart(product);
     
@@ -367,3 +372,5 @@ add_to_cart_8.addEventListener("click", ()=>{
     addToCart(product_8);
     
 })
+
+
