@@ -317,7 +317,7 @@ let icon_from_cart6 = "single-icon-6";
 let icon_from_cart7 = "single-icon-7";
 let icon_from_cart8 = "single-icon-8";
 
-function addToCart(p,s,ic){
+function addToCart(p,s,icon){
 
     // This helps to get the value of the product that is been click on such as the image, name and the price of the product
 
@@ -333,7 +333,7 @@ function addToCart(p,s,ic){
     <div class="single-prize">
     <p id="amount">${p.getElementsByTagName("p")[0].innerHTML}</p>
         <div class="quantity-spec" >
-            <img src="img/delete_Icon.png" alt="Clear_icon"id="${ic}" onclick='document.getElementById("${s}").remove()'>
+            <img src="img/delete_Icon.png" alt="Clear_icon"id="${icon}" onclick='document.getElementById("${s}").remove()'>
         </div>
     </div>
     </div>
@@ -342,7 +342,14 @@ function addToCart(p,s,ic){
     
     product_in_cart.innerHTML += result;
 
+
+    //this here reflect the price of the selected product
+
+    document.getElementById("total").innerHTML = p.getElementsByTagName("p")[0].innerHTML;
+
     
+
+
     // cartNumber shows the number of items in the cart list
     
     // this displays the number of items in the cart when it is greater than or = 1
@@ -357,6 +364,7 @@ function addToCart(p,s,ic){
     
     
 }
+
 // this listens for a change in its list of product if more product where added or removed 
 product_in_cart.addEventListener("click", ()=>{
     // this gets the list of product in the cart
@@ -365,6 +373,7 @@ product_in_cart.addEventListener("click", ()=>{
     if(product_in_cart.getElementsByClassName("single-product").length == 0){
         cartNumber.style.display ="none";
     }
+
 })
 
 // this add a click event to the cart icon on each of the product
@@ -427,5 +436,20 @@ function clearCart(){
 
 // This calls the function that clears the cart
 clearAll_icon.addEventListener("click", clearCart);
+
+// this holds the cart icon from the navbar
+let showCart_icon = document.getElementById("show_cart");
+
+// this hold the column for the list of items in cart section
+let showCart_section = document.getElementById("col1-cart-list-section");
+
+showCart_icon.addEventListener("click", ()=>{
+    if(showCart_section.style.display == "none"){
+        showCart_section.style.display = "flex";
+    }else{
+        showCart_section.style.display = "none"
+    }
+    console.log("working")
+})
 
 

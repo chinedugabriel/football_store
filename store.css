@@ -391,7 +391,7 @@ section>div.nav>div.nav-icon-group>.cartnumber{
         position: relative;
         gap: 20px;
         overflow: scroll;
-
+        /* display: none; */
     }
     section#section-2>div.container>div.row3>.col1>.cart-nav-sec{
         width: 90%;
