@@ -256,11 +256,11 @@ section>div.nav>div.nav-icon-group>.cartnumber{
         display: flex;
         flex-flow: column nowrap;
         gap: 10px;
-        /* justify-content: center; */
-        /* align-items: center; */
+        justify-content: center;
+        align-items: center;
         /* turn this on*/
-        /* height: 100vh; */
-        display: none;
+        height: 100vh;
+        /* display: none; */
     }
     section#section-2>div.container>div.row1>h1{
         font-size: 48px;

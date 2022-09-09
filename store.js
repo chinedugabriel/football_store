@@ -201,7 +201,7 @@ loginBtn.addEventListener("click", validateLoginForm);
         }
 
     }
-    setInterval(section_slider, 5000);
+   let bgSlider = setInterval(section_slider, 5000);
 
     // nav toggle
     let btn_toggle_nav = document.getElementById("menu-toggle-btn");
@@ -236,10 +236,13 @@ loginBtn.addEventListener("click", validateLoginForm);
 
     function selectProductToDetailsSection(p,add){
 
+        clearInterval(bgSlider);
+        // here hide's the row1 which has the welcome message
+        row_1.style.display ="none";
+
+        // here shows the row-2 which holds the details of the product
         row_2_productDetails.style.display = "flex";
-        // console.log(p.getElementsByTagName("img")[0].src);
-        // console.log(p.getElementsByTagName("p")[0].innerHTML);
-        // console.log(p.getElementsByTagName("h2")[0].innerHTML);
+
 
         // this here helps to change the text of the product name description
         let cutText = `${p.getElementsByTagName("p")[0].innerHTML}`;
@@ -264,6 +267,7 @@ loginBtn.addEventListener("click", validateLoginForm);
         // this helps to close the My cart list section on deskTop and mobile
         btn_close_product_description.addEventListener("click", ()=>{
             row_2_productDetails.style.display = "none";
+            row_1.style.display ="flex";
         });
         btn_close_product_description_mobile.addEventListener("click", ()=>{
             row_2_productDetails.style.display = "none";
@@ -449,7 +453,16 @@ showCart_icon.addEventListener("click", ()=>{
     }else{
         showCart_section.style.display = "none"
     }
+    // console.log("working")
+});
+
+let goFromShopListToHome = document.getElementById("go-shop-icon");
+
+// row_3_cartCheckout
+
+goFromShopListToHome.addEventListener("click", ()=>{
+
+        row_3_cartCheckout.style.display ="none";
+        row_1.style.display ="flex";
     console.log("working")
 })
-
-
