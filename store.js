@@ -298,15 +298,32 @@ let add_to_cart_8 = document.getElementById("add-to-cart-8");
 // this shows the number of items in the cart list
 let cartNumber = document.getElementById("cart-number");
 
-let n = 0;
-function addToCart(p){
-    n++;
-    
+// 
+let remove_from_cart = "single-product";
+let remove_from_cart2 = "single-product-2";
+let remove_from_cart3 = "single-product-3";
+let remove_from_cart4 = "single-product-4";
+let remove_from_cart5 = "single-product-5";
+let remove_from_cart6 = "single-product-6";
+let remove_from_cart7 = "single-product-7";
+let remove_from_cart8 = "single-product-8";
+
+let icon_from_cart = "single-icon";
+let icon_from_cart2 = "single-icon-2";
+let icon_from_cart3 = "single-icon-3";
+let icon_from_cart4 = "single-icon-4";
+let icon_from_cart5 = "single-icon-5";
+let icon_from_cart6 = "single-icon-6";
+let icon_from_cart7 = "single-icon-7";
+let icon_from_cart8 = "single-icon-8";
+
+function addToCart(p,s,ic){
+
     // This helps to get the value of the product that is been click on such as the image, name and the price of the product
 
     let result = "";
     result = `
-    <div class="single-product">
+    <div class='single-product' id="${s}">
     <img src="${p.getElementsByTagName("img")[0].src}" id="single-product-view">
     <div class="product-name-wrapper">
     <div class="product-name-wrapper-text">
@@ -315,8 +332,8 @@ function addToCart(p){
     </div>
     <div class="single-prize">
     <p id="amount">${p.getElementsByTagName("p")[0].innerHTML}</p>
-        <div class="quantity-spec">
-            <img src="img/delete_Icon.png" alt="Clear_icon"id="clear_cart">
+        <div class="quantity-spec" >
+            <img src="img/delete_Icon.png" alt="Clear_icon"id="${ic}" onclick='document.getElementById("${s}").remove()'>
         </div>
     </div>
     </div>
@@ -325,8 +342,9 @@ function addToCart(p){
     
     product_in_cart.innerHTML += result;
 
+    
     // cartNumber shows the number of items in the cart list
-
+    
     // this displays the number of items in the cart when it is greater than or = 1
     if(product_in_cart.getElementsByClassName("single-product").length >= 1){
         cartNumber.style.display ="flex";
@@ -335,42 +353,52 @@ function addToCart(p){
     }else{
         cartNumber.style.display = "none";
     }
-
-
+     
+    
+    
 }
+// this listens for a change in its list of product if more product where added or removed 
+product_in_cart.addEventListener("click", ()=>{
+    // this gets the list of product in the cart
+    cartNumber.innerHTML = product_in_cart.getElementsByClassName("single-product").length;
+    // this removes the product number indicator if or when it is empty
+    if(product_in_cart.getElementsByClassName("single-product").length == 0){
+        cartNumber.style.display ="none";
+    }
+})
 
 // this add a click event to the cart icon on each of the product
 
 add_to_cart.addEventListener("click", ()=>{
-    addToCart(product);
+    addToCart(product, remove_from_cart, icon_from_cart);
     
 })
 add_to_cart_2.addEventListener("click", ()=>{
-    addToCart(product_2);
+    addToCart(product_2, remove_from_cart2, icon_from_cart2);
     
 })
 add_to_cart_3.addEventListener("click", ()=>{
-    addToCart(product_3);
+    addToCart(product_3, remove_from_cart3, icon_from_cart3);
     
 })
 add_to_cart_4.addEventListener("click", ()=>{
-    addToCart(product_4);
+    addToCart(product_4, remove_from_cart4, icon_from_cart4);
     
 })
 add_to_cart_5.addEventListener("click", ()=>{
-    addToCart(product_5); 
+    addToCart(product_5, remove_from_cart5, icon_from_cart5); 
     
 })
 add_to_cart_6.addEventListener("click", ()=>{
-    addToCart(product_6);
+    addToCart(product_6, remove_from_cart6, icon_from_cart6);
     
 })
 add_to_cart_7.addEventListener("click", ()=>{
-    addToCart(product_7);
+    addToCart(product_7, remove_from_cart7, icon_from_cart7);
     
 })
 add_to_cart_8.addEventListener("click", ()=>{
-    addToCart(product_8);
+    addToCart(product_8, remove_from_cart8, icon_from_cart8);
     
 })
 
@@ -397,4 +425,7 @@ function clearCart(){
     }
 }
 
+// This calls the function that clears the cart
 clearAll_icon.addEventListener("click", clearCart);
+
+
