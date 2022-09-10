@@ -1529,9 +1529,10 @@ section.section-3 div.products>img{
     /* width: 10px; */
 }
 
-section.section-3 div.products h3{
-    font-size: 1px;
-    font-weight: 500;
+section.section-3 div.products h2{
+    font-size: 20px;
+    font-weight: 400;
+    width: 90px;
 }
 
 section.section-3 div.products p{
@@ -1541,7 +1542,7 @@ section.section-3 div.products p{
 
 section.section-3 div.products>div.cart-text-wrapper{
     /* border: 1px solid #ffffff; */
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -1549,11 +1550,11 @@ section.section-3 div.products>div.cart-text-wrapper{
 }
 
 section.section-3 div.products>div.cart-text-wrapper>div.row-text{
-    width: 65%;
+    width: 80%;
     /* border: 1px solid #9e0f0f; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart{
