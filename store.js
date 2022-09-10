@@ -76,11 +76,7 @@ let message = document.getElementById("message");
 
 
 
-    // length of the words
-    // check for special characters like @#$%!^&*()_+=><?/[]{} 
-    // check how many times a character occurs
-    // message(weak, medium, strong, veryStrong)
-    // message_color(red, yellow, orange, green)
+// this function checks the password the user inputs before going to the next section
 
 function passwordStrengthChecker(){
     // this display the passwordIndicatorSection when the password input change
@@ -127,7 +123,7 @@ function passwordStrengthChecker(){
 }
 signUpPassword.addEventListener("change", passwordStrengthChecker);
 
-// form var....
+// form veriable
 let registerForm = document.getElementById("register");
 let loginForm = document.getElementById("login");
 
@@ -168,7 +164,11 @@ loginBtn
 */ 
 if(input_email.value !="" && input_password.value !=""){
     section_1.style.display = "none";
+    section_2.style.display = "flex";
     row_1.style.display = "flex";
+    row_3_cartCheckout.style.display = "none";
+    section_3.style.display = "flex";
+    section_3_row.style.display = "flex";
 }else{
     input_email.style.border ="1px solid red";
     document.getElementById("input-wrapper").style.border ="1px solid red";
@@ -271,6 +271,7 @@ loginBtn.addEventListener("click", validateLoginForm);
         });
         btn_close_product_description_mobile.addEventListener("click", ()=>{
             row_2_productDetails.style.display = "none";
+            row_1.style.display ="flex";
         });
 
 
@@ -447,22 +448,55 @@ let showCart_icon = document.getElementById("show_cart");
 // this hold the column for the list of items in cart section
 let showCart_section = document.getElementById("col1-cart-list-section");
 
+// this holds the card payment section
+let online_card_payment = document.getElementById("card-payment");
+
 showCart_icon.addEventListener("click", ()=>{
+    // if(row_3_cartCheckout.style.display == "none"){
+    //     showCart_section.style.display = "flex";
+    // }
+    
     if(showCart_section.style.display == "none"){
+        row_3_cartCheckout.style.display = "flex";
         showCart_section.style.display = "flex";
+        clearInterval(bgSlider);
+        // here hide's the row1 which has the welcome message
+        row_1.style.display ="none";
+        online_card_payment.style.display ="none";
     }else{
         showCart_section.style.display = "none"
+        clearInterval(bgSlider);
+        // here hide's the row1 which has the welcome message
+        row_1.style.display ="flex";
+        row_3_cartCheckout.style.display = "none";
     }
-    // console.log("working")
 });
 
 let goFromShopListToHome = document.getElementById("go-shop-icon");
 
 // row_3_cartCheckout
-
+// this hides the view of checkOut list
 goFromShopListToHome.addEventListener("click", ()=>{
 
         row_3_cartCheckout.style.display ="none";
         row_1.style.display ="flex";
-    console.log("working")
+});
+
+// this holds the checkout button
+let checkout_btn = document.getElementById("checkout-btn");
+
+
+
+// this helps to show the online payment column and hides the cart list
+checkout_btn.addEventListener("click",()=>{
+    showCart_section.style.display = "none";
+    online_card_payment.style.display ="flex";
+})
+
+// backTo-list
+let backTo_list_nav = document.getElementById("backTo-list");
+
+backTo_list_nav.addEventListener("click",()=>{
+    showCart_section.style.display = "flex";
+    online_card_payment.style.display ="none";
 })

@@ -239,6 +239,7 @@ section>div.nav>div.nav-icon-group>.cartnumber{
         /* border: 1px solid rgb(45, 129, 70); */
         display: flex;
         flex-flow: column nowrap;
+        display: none;
     }
     /* .row1 ands here */
     /* container starts here */
@@ -371,6 +372,7 @@ section>div.nav>div.nav-icon-group>.cartnumber{
     /* section#section-2>div.container>div.row2 ends here */
 
     /* section#section-2>div.container>div.row3 starts here */
+    /* My Cart & Checkout section */
     section#section-2>div.container>div.row3{
         border: 1px solid rgb(45, 129, 70);
         height: 80vh;
@@ -379,6 +381,7 @@ section>div.nav>div.nav-icon-group>.cartnumber{
         flex-flow: row wrap;
         justify-content: space-around;
         /* overflow: scroll; */
+        /* display: none; */
     }
     section#section-2>div.container>div.row3>.col1{
         width: 45%;
@@ -683,6 +686,7 @@ section>div.nav>div.nav-icon-group>.cartnumber{
         align-items: center;
         justify-content: center;
         gap: 22px;
+
     }
     section.section-3>div.row2{
         /* border: 2px solid #d13e3e; */
@@ -695,7 +699,7 @@ section>div.nav>div.nav-icon-group>.cartnumber{
         justify-content: space-evenly;
         align-items:center;
         align-content: space-evenly;
-
+        display: none;
     }
 
 section.section-3 div.products{
@@ -957,6 +961,7 @@ section.section-2{
     /* align-content: space-around; */
     position: relative;
     padding: 0px;
+    display: none;
 }
 /* .row1 ends here */
 
@@ -1069,7 +1074,7 @@ section#section-2>div.container>div.row1{
     flex-flow: column nowrap;
     gap: 10px;
     align-items: center;
-    display: none;
+    /* display: none; */
 }
 section#section-2>div.container>div.row1>h1{
     font-size: 35px;
@@ -1102,7 +1107,7 @@ section>div.icon-down{
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
-        /* display: none; */
+        display: none;
     }
     section#section-2>div.container>div.row2>.col-1{
         width: 100%;
@@ -1201,7 +1206,7 @@ section>div.icon-down{
         flex-flow: row wrap;
         justify-content: space-around;
         /* overflow: scroll; */
-        /* display: none; */
+        display: none;
     }
     section#section-2>div.container>div.row3>.col1{
         width: 100%;
@@ -1518,12 +1523,19 @@ section.section-3 div.products{
     justify-content: space-around;
     align-items: center;
 }
+
 section.section-3 div.products>img{
     height: 8em;
     /* width: 10px; */
 }
+
+section.section-3 div.products h3{
+    font-size: 1px;
+    font-weight: 500;
+}
+
 section.section-3 div.products p{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -1535,6 +1547,7 @@ section.section-3 div.products>div.cart-text-wrapper{
     align-items: center;
     
 }
+
 section.section-3 div.products>div.cart-text-wrapper>div.row-text{
     width: 65%;
     /* border: 1px solid #9e0f0f; */
@@ -1542,6 +1555,7 @@ section.section-3 div.products>div.cart-text-wrapper>div.row-text{
     align-items: center;
     justify-content: space-between;
 }
+
 section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart{
     border: 1px solid #272727;
     height: 2em;
@@ -1551,17 +1565,12 @@ section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart{
     justify-content: center;
     align-items: center;
 }
+
 section.section-3 div.products>div.cart-text-wrapper>div.row-text>div.icon-cart>img{
     width: 1.4em;
 }
 
-section.section-3>button{
-    height: 35px;
-    width: 110px;
-    border: 1px solid #272727;
-    border-radius: 20px;
-    background-color: transparent;
-}
+
 
 /* shop section ends here */
 }
