@@ -375,7 +375,7 @@ section>div.nav>div.nav-icon-group>.cartnumber{
     /* My Cart & Checkout section */
     section#section-2>div.container>div.row3{
         border: 1px solid rgb(45, 129, 70);
-        height: 80vh;
+        height: 90vh;
         width: 90%;
         display: flex;
         flex-flow: row wrap;
@@ -1200,7 +1200,7 @@ section>div.icon-down{
     /* section#section-2>div.container>div.row3 starts here */
     section#section-2>div.container>div.row3{
         border: 1px solid rgb(45, 129, 70);
-        height: 80%;
+        height: 80vh;
         width: 90%;
         display: flex;
         flex-flow: row wrap;
