@@ -975,7 +975,7 @@ section>div.nav{
     position: -webkit-sticky;
     position: sticky;
     /* padding-top: 5px; */
-    top: 35px;
+    top: 0px;
     width: 90%;
     height: 3.5em;
 }
