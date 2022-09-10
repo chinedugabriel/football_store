@@ -242,7 +242,8 @@ loginBtn.addEventListener("click", validateLoginForm);
 
         // here shows the row-2 which holds the details of the product
         row_2_productDetails.style.display = "flex";
-
+        //hide my cart &  Checkout section
+        row_3_cartCheckout.style.display = "none";
 
         // this here helps to change the text of the product name description
         let cutText = `${p.getElementsByTagName("p")[0].innerHTML}`;
@@ -364,6 +365,7 @@ function addToCart(p,s,icon){
         cartNumber.innerHTML = product_in_cart.getElementsByClassName("single-product").length;
     }else{
         cartNumber.style.display = "none";
+        document.getElementById("total").innerHTML = "$0"
     }
      
     
@@ -455,13 +457,14 @@ showCart_icon.addEventListener("click", ()=>{
     // if(row_3_cartCheckout.style.display == "none"){
     //     showCart_section.style.display = "flex";
     // }
+    row_3_cartCheckout.style.display = "flex";
     
     if(showCart_section.style.display == "none"){
-        row_3_cartCheckout.style.display = "flex";
         showCart_section.style.display = "flex";
         clearInterval(bgSlider);
         // here hide's the row1 which has the welcome message
         row_1.style.display ="none";
+        row_2_productDetails.style.display ="none";
         online_card_payment.style.display ="none";
     }else{
         showCart_section.style.display = "none"
