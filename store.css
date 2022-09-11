@@ -992,7 +992,7 @@ section>div.nav>ul{
     display: flex;
     flex-flow: column nowrap;
     list-style: none;
-    border: 2px solid rgb(45, 129, 70) ;
+    /* border: 2px solid rgb(45, 129, 70) ; */
     width: 60%;
     height: 19em;
     align-items: center;
